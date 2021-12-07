@@ -16,17 +16,24 @@ public class GameManager : MonoBehaviour
     public bool gameover;
     public GameObject gameoverpanel;
     public int brickall;
+    private GameObject player;
     [SerializeField] private DialogueMid win;
     [SerializeField] private Pause pausebtn;
     [SerializeField] private BossWin bosswin;
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("start");
+
         //ngatur text dalem tanpa ngisi boxnya
         livesText.text = "Lives: " + lives;
         scoreText.text = "Score: " + score;
         brickall = GameObject.FindGameObjectsWithTag ("brick").Length;
         Time.timeScale = 1;
+        player = FindObjectOfType<PlayerController>().gameObject;
+        player.SetActive(false);
+        player.transform.GetChild(0).gameObject.SetActive(false);
+        Debug.Log(player.transform.parent.name);
     }
 
     // Update is called once per frame
@@ -71,14 +78,18 @@ public class GameManager : MonoBehaviour
     {
         //start coroutine untuk menjalankan ienumerator
         if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main")) {
+            player.SetActive(true);
             win.StartCoroutine(win.Dialogue());
         }
         else
         {
-            //Debug.Log("end");
-            bosswin.winBossChat();
+            
+            
+            bosswin.StartCoroutine(bosswin.winBossChat(player));
+
 
         }
+       
     }
     void GameOver(){
         gameover = true;
@@ -92,7 +103,10 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
     public void Quit(){
-        Application.Quit();
+        player.SetActive(true);
+        player.transform.GetChild(0).gameObject.SetActive(true);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("HomeTown");
         //cekl apakah work
         Debug.Log("game Keluar");
     }

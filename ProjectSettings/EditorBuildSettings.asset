@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 4a457a94958f46f47b825cccf0d3bb17
+  - enabled: 1
+    path: Assets/Scenes/Bossmatch.unity
+    guid: 9cd9ab64894f7dd4091ff3b972f8148c
   m_configObjects: {}

@@ -11,6 +11,7 @@ public class Ball : MonoBehaviour
     public Transform particle;
     public GameManager gm;
     public Transform powerup;
+    private int bouncecount;
     AudioSource audio;
 
     // Start is called before the first frame update
@@ -36,6 +37,7 @@ public class Ball : MonoBehaviour
             rb.AddForce(Vector2.up * speedneeded);
 
         }
+        
     }
 
     //wat hapen kalau kena trigger bawah
@@ -50,7 +52,8 @@ public class Ball : MonoBehaviour
 
     //wat happen kalau nabrak box
     void OnCollisionEnter2D(Collision2D other){
-        if(other.transform.CompareTag("brick")){
+        CheckVelocity();
+        if (other.transform.CompareTag("brick")){
             //baru sampe sini
             Brick brick = other.gameObject.GetComponent<Brick>();
             if(brick.hitToBreak > 1){
@@ -86,14 +89,31 @@ public class Ball : MonoBehaviour
     }
     public void CheckVelocity()
     {
+        Debug.Log("exe");
         // Prevent ball from rolling in the same directon forever
         if (rb.velocity.x == 0)
         {
-            rb.velocity = new Vector2(Random.Range(1, 3), rb.velocity.y);
+            
+            bouncecount++;
+            if(bouncecount >= 3)
+            {
+                rb.velocity = new Vector2(Random.Range(-1, 1), rb.velocity.y);
+                bouncecount = 0;
+            }
         }
         else if (rb.velocity.y == 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, Random.Range(1, 3));
+            bouncecount++;
+            if (bouncecount >= 3)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, Random.Range(-1, 1));
+                bouncecount = 0;
+            }
+            
+        }
+        else
+        {
+            bouncecount = 0;
         }
     }
 }

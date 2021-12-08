@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
 
     private Character character;
 
+    private void Start() {
+        
+    }
+
     private void Awake()
     {
         character = GetComponent<Character>();
@@ -25,8 +29,10 @@ public class PlayerController : MonoBehaviour
             //menghilangkan gerakan diagonal
             if (input.x != 0) input.y = 0;
 
-            if (input != Vector2.zero)
+            if (input != Vector2.zero && gameObject.activeSelf == true)
             {
+                //character.StartCoroutine(character.Move(input, OnMoveOver));
+                
                 StartCoroutine(character.Move(input, OnMoveOver));
             }
         }

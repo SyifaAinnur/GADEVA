@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         //ngatur text dalem tanpa ngisi boxnya
         livesText.text = "Lives: " + lives;
         scoreText.text = "Score: " + score;
-        brickall = GameObject.FindGameObjectsWithTag ("brick").Length;
+        brickall = GameObject.FindGameObjectsWithTag("brick").Length;
         Time.timeScale = 1;
         player = FindObjectOfType<PlayerController>().gameObject;
         player.SetActive(false);
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             pausebtn.StartPause();
@@ -47,11 +47,13 @@ public class GameManager : MonoBehaviour
     }
 
     //function penagturan lives
-    public void UpdateLives(int changeInLives){
+    public void UpdateLives(int changeInLives)
+    {
         lives += changeInLives;
 
         //cek untuk habis nyawa
-        if(lives <= 0){
+        if (lives <= 0)
+        {
             lives = 0;
             GameOver();
         }
@@ -59,39 +61,46 @@ public class GameManager : MonoBehaviour
     }
 
     //function pengfaturan score
-    public void UpdateScore(int points){
+    public void UpdateScore(int points)
+    {
         score += points;
 
         //cek untuk habis nyawa
         scoreText.text = "Score: " + score;
     }
 
-    public void UpdateNumberOfBrick(){
+    public void UpdateNumberOfBrick()
+    {
         brickall--;
         //Debug.Log(brickall);
-        if (brickall <= 0){
-            
+        if (brickall <= 0)
+        {
+
             Win();
         }
     }
     void Win()
     {
         //start coroutine untuk menjalankan ienumerator
-        if(SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main")) {
+        if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main"))
+        {
+
             player.SetActive(true);
+            player.transform.GetChild(0).gameObject.SetActive(true);
             win.StartCoroutine(win.Dialogue());
         }
         else
         {
-            
-            
+
+
             bosswin.StartCoroutine(bosswin.winBossChat(player));
 
 
         }
-       
+
     }
-    void GameOver(){
+    void GameOver()
+    {
         gameover = true;
 
         //menyalakan panel
@@ -99,11 +108,14 @@ public class GameManager : MonoBehaviour
     }
 
     //function untuk main lagi
-    public void PlayAgain(){
+    public void PlayAgain()
+    {
         SceneManager.LoadScene("Main");
     }
-    public void Quit(){
+    public void Quit()
+    {
         player.SetActive(true);
+
         player.transform.GetChild(0).gameObject.SetActive(true);
         Time.timeScale = 1;
         SceneManager.LoadScene("Route1");

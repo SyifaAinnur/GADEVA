@@ -45,6 +45,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\IntroFolder\Script\Intro2ManagerScript.cs" />
+     <Compile Include="Assets\IntroFolder\Script\IntroManagerScript.cs" />
+     <Compile Include="Assets\IntroFolder\Script\PindahScene.cs" />
      <Compile Include="Assets\Script\Ball.cs" />
      <Compile Include="Assets\Script\Boss.cs" />
      <Compile Include="Assets\Script\BossWin.cs" />

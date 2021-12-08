@@ -11,6 +11,12 @@ public class Character : MonoBehaviour
 
     public float OffsetY{ get; private set; } = 0.3f;
     CharacterAnimator animator;
+
+
+    private void Start() {
+        
+    }
+
     private void Awake()
     {
         animator = GetComponent<CharacterAnimator>();

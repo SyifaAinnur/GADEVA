@@ -7,11 +7,36 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("HomeTown");
+        // GetComponent<AudioSource>().Play();
+        // SceneManager.LoadScene("Intro1");
+        StartCoroutine(Wait());
+
+    }
+
+    public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 
     public void QuitGame()
     {
+        StartCoroutine(Wait2());
+
+    }
+
+    private IEnumerator Wait()
+    {
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.3f);
+
+        SceneManager.LoadScene("Intro1");
+    }
+
+        private IEnumerator Wait2()
+    {
+        GetComponent<AudioSource>().Play();
+        yield return new WaitForSeconds(0.3f);
+
         Application.Quit();
     }
 }

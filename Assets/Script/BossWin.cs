@@ -21,5 +21,5 @@ public class BossWin : MonoBehaviour
 
         yield return 0;
     }
-     
+
 }

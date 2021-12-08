@@ -59,6 +59,7 @@
      <Compile Include="Assets\Script\DialogueMid.cs" />
      <Compile Include="Assets\Script\GameManager.cs" />
      <Compile Include="Assets\Script\HealthBar.cs" />
+     <Compile Include="Assets\Script\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Script\Movement.cs" />
      <Compile Include="Assets\Script\OptionScript.cs" />
      <Compile Include="Assets\Script\Paddle.cs" />

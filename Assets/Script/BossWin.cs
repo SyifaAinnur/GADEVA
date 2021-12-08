@@ -17,7 +17,7 @@ public class BossWin : MonoBehaviour
         player.SetActive(true);
         player.transform.GetChild(0).gameObject.SetActive(true);
         Time.timeScale = 1;
-        SceneManager.LoadScene("HomeTown");
+        SceneManager.LoadScene("Route1");
 
         yield return 0;
     }

@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
         player.SetActive(true);
         player.transform.GetChild(0).gameObject.SetActive(true);
         Time.timeScale = 1;
-        SceneManager.LoadScene("HomeTown");
+        SceneManager.LoadScene("Route1");
         //cekl apakah work
         Debug.Log("game Keluar");
     }

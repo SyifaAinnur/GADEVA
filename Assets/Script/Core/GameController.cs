@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -13,8 +14,12 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] Camera worldCamera;
+    [SerializeField] private Pause pausebtn;
     GameState state;
     GameState stateBeforePause;
+
+
+
 
     public static GameController Instance { get; private set; }
 
@@ -79,5 +84,12 @@ public class GameController : MonoBehaviour
             DialogManagerIdle.Instance.HandleUpdate();
         }
 
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("MainMenu");
+        //cekl apakah work
+        Debug.Log("game Keluar");
     }
 }

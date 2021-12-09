@@ -1508,4 +1508,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/House1.unity
   - Assets/Scenes/Main.unity
   - Assets/Scenes/Bossmatch.unity
-  playerPath: D:/build V9/TestGame.exe
+  playerPath: D:/projectAkhir/TestGame/New folder/BUILD V8/TestGame.exe

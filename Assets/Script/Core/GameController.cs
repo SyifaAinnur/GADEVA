@@ -32,6 +32,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        playerController.gameObject.SetActive(true);
+        
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
@@ -53,6 +55,8 @@ public class GameController : MonoBehaviour
             if (state == GameState.DialogIdle)
                 state = GameState.FreeRoam;
         };
+
+        
     }
 
     public void PauseGame(bool pause)
@@ -91,8 +95,9 @@ public class GameController : MonoBehaviour
     {
         Time.timeScale = 1;
         pausebtn.gameObject.SetActive(false);
+        playerController.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
-        
+
         //cekl apakah work
         Debug.Log("game Keluar");
     }

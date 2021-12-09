@@ -12,7 +12,7 @@ public enum GameState
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] PlayerController playerController;
+    public PlayerController playerController;
     [SerializeField] Camera worldCamera;
 
     [SerializeField] private Pause pausebtn;

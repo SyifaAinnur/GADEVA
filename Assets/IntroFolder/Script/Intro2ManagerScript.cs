@@ -63,6 +63,14 @@ public class Intro2ManagerScript : MonoBehaviour
         yield return new WaitUntil(() => sps == 9);
         StartCoroutine(ChatText("Akanku tunjukan siapa aku!"));
         yield return new WaitUntil(() => sps == 10);
+        try
+        {
+            FindObjectOfType<GameController>().playerController.gameObject.SetActive(true);
+        }
+        catch
+        {
+
+        }
         FindObjectOfType<PindahScene>().Move();
     }
 

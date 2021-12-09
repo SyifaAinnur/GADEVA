@@ -114,6 +114,8 @@ public class GameManager : MonoBehaviour
     //function untuk main lagi
     public void PlayAgain()
     {
+        player.SetActive(true);
+        player.transform.GetChild(0).gameObject.SetActive(true);
         SceneManager.LoadScene("Main");
     }
     public void Quit()

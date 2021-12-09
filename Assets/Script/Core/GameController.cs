@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] PlayerController playerController;
     [SerializeField] Camera worldCamera;
+
     [SerializeField] private Pause pausebtn;
     GameState state;
     GameState stateBeforePause;
@@ -88,7 +89,10 @@ public class GameController : MonoBehaviour
 
     public void Quit()
     {
+        Time.timeScale = 1;
+        pausebtn.gameObject.SetActive(false);
         SceneManager.LoadScene("MainMenu");
+        
         //cekl apakah work
         Debug.Log("game Keluar");
     }

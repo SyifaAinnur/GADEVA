@@ -17,9 +17,12 @@ public class GameManager : MonoBehaviour
     public GameObject gameoverpanel;
     public int brickall;
     private GameObject player;
+
+    private SoundManager soundManager;
     [SerializeField] private DialogueMid win;
     [SerializeField] private Pause pausebtn;
     [SerializeField] private BossWin bosswin;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
         brickall = GameObject.FindGameObjectsWithTag("brick").Length;
         Time.timeScale = 1;
         player = FindObjectOfType<PlayerController>().gameObject;
+        soundManager = FindObjectOfType<SoundManager>();
         player.SetActive(false);
         player.transform.GetChild(0).gameObject.SetActive(false);
         Debug.Log(player.transform.parent.name);
@@ -115,7 +119,7 @@ public class GameManager : MonoBehaviour
     public void Quit()
     {
         player.SetActive(true);
-
+        player.GetComponent<TurnGameObject>().TurnOn();
         player.transform.GetChild(0).gameObject.SetActive(true);
         Time.timeScale = 1;
         SceneManager.LoadScene("Route1");

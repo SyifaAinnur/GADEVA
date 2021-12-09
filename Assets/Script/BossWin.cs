@@ -15,6 +15,7 @@ public class BossWin : MonoBehaviour
         chatend.text = "mantab";
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         player.SetActive(true);
+        player.GetComponent<TurnGameObject>().TurnOn();
         player.transform.GetChild(0).gameObject.SetActive(true);
         Time.timeScale = 1;
         SceneManager.LoadScene("Route1");

@@ -14,10 +14,14 @@ public class TrainerController : MonoBehaviour, Interactable
 
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
         {
+            StopMusic();
             SceneManager.LoadScene("main");
-
-            
         }));
+    }
+
+    private void StopMusic()
+    {
+        FindObjectOfType<TurnGameObject>().TurnOff();
     }
 
     private void Awake()

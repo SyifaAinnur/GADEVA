@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     private Character character;
 
     private void Start() {
-        
+        Debug.Log("PlayerController.Start()");
     }
 
     private void Awake()

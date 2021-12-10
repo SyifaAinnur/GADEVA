@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public int brickall;
     private GameObject player;
 
+    
+
     private SoundManager soundManager;
     [SerializeField] private DialogueMid win;
     [SerializeField] private Pause pausebtn;
@@ -34,12 +36,20 @@ public class GameManager : MonoBehaviour
         livesText.text = "Lives: " + lives;
         scoreText.text = "Score: " + score;
         brickall = GameObject.FindGameObjectsWithTag("brick").Length;
-        Time.timeScale = 0;
+        CheckActiveScene();
         player = FindObjectOfType<PlayerController>().gameObject;
         soundManager = FindObjectOfType<SoundManager>();
         player.SetActive(false);
         player.transform.GetChild(0).gameObject.SetActive(false);
         Debug.Log(player.transform.parent.name);
+    }
+
+    void CheckActiveScene() {
+        if (SceneManager.GetActiveScene().name == "Main") {
+            Time.timeScale = 0;
+        } else {
+            Time.timeScale = 1;
+        }
     }
 
     // Update is called once per frame
@@ -132,7 +142,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void ClosePopup() {
-        panel.SetActive(false);
+        panel.transform.parent.gameObject.SetActive(false);
+        // panel.SetActive(false);
         Time.timeScale = 1;
 
     }

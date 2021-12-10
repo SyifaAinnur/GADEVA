@@ -13,7 +13,9 @@ public enum GameState
 public class GameController : MonoBehaviour
 {
     public PlayerController playerController;
+    [HideInInspector] public string namaScene;
     [SerializeField] Camera worldCamera;
+
 
     [SerializeField] private Pause pausebtn;
     GameState state;
@@ -96,6 +98,7 @@ public class GameController : MonoBehaviour
         Time.timeScale = 1;
         pausebtn.gameObject.SetActive(false);
         playerController.gameObject.SetActive(false);
+        namaScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("MainMenu");
 
         //cekl apakah work

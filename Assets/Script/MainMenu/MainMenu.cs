@@ -15,7 +15,9 @@ public class MainMenu : MonoBehaviour
 
     public void PlaySound()
     {
+        
         GetComponent<AudioSource>().Play();
+
     }
 
     public void QuitGame()
@@ -28,11 +30,20 @@ public class MainMenu : MonoBehaviour
     {
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.3f);
-
-        SceneManager.LoadScene("Intro1");
+        GameController gc = FindObjectOfType<GameController>();
+        if (gc != null)
+        {
+            gc.playerController.gameObject.SetActive(true);
+            FindObjectOfType<SoundManager>().GetComponent<AudioSource>().Play();
+            SceneManager.LoadScene(gc.namaScene);
+        }
+        else
+        {
+            SceneManager.LoadScene("Intro1");
+        }
     }
 
-        private IEnumerator Wait2()
+    private IEnumerator Wait2()
     {
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.3f);

@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private DialogueMid win;
     [SerializeField] private Pause pausebtn;
     [SerializeField] private BossWin bosswin;
+    [SerializeField] private GameObject panel;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,7 @@ public class GameManager : MonoBehaviour
         livesText.text = "Lives: " + lives;
         scoreText.text = "Score: " + score;
         brickall = GameObject.FindGameObjectsWithTag("brick").Length;
-        Time.timeScale = 1;
+        Time.timeScale = 0;
         player = FindObjectOfType<PlayerController>().gameObject;
         soundManager = FindObjectOfType<SoundManager>();
         player.SetActive(false);
@@ -127,5 +129,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Route1");
         //cekl apakah work
         Debug.Log("game Keluar");
+    }
+
+    public void ClosePopup() {
+        panel.SetActive(false);
+        Time.timeScale = 1;
+
     }
 }

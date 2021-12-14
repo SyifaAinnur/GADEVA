@@ -21,8 +21,8 @@ public class GameController : MonoBehaviour
     GameState state;
     GameState stateBeforePause;
 
-
-
+    public SceneDetails CurrentScene { get; private set; }
+    public SceneDetails PrevScene { get; private set; }
 
     public static GameController Instance { get; private set; }
 
@@ -103,5 +103,11 @@ public class GameController : MonoBehaviour
 
         //cekl apakah work
         Debug.Log("game Keluar");
+    }
+
+    public void SetCureentScene(SceneDetails currScene)
+    {
+        PrevScene = CurrentScene;
+        CurrentScene = currScene;
     }
 }

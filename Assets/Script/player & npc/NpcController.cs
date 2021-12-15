@@ -12,10 +12,13 @@ public class NpcController : MonoBehaviour, Interactable
     float idleTimer = 0f;
     int currentPattern = 0;
     Character character;
+    ItemGiver itemGiver;
 
     private void Awake()
     {
         character = GetComponent<Character>();
+        itemGiver = GetComponent<ItemGiver>();
+
     }
 
     public void Interact(Transform initiator)
@@ -24,6 +27,20 @@ public class NpcController : MonoBehaviour, Interactable
         {
             state = NPCState.Dialog;
             character.LookTowards(initiator.position);
+
+            if (itemGiver != null && itemGiver.CanBeGiven())
+            {
+                itemGiver.StartCoroutine(itemGiver.GiveItem(initiator.GetComponent<PlayerController>()));
+            }
+            else
+            {
+
+            }
+
+            if (gameObject.tag == "NPC ACHIEVMENT")
+            {
+                return ;
+            }
 
             StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
             {

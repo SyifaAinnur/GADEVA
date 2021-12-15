@@ -12,7 +12,7 @@ public class DialogManager : MonoBehaviour
 
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
-    public static DialogManager Instance {get; private set;}
+    public static DialogManager Instance { get; private set; }
 
     private void Awake()
     {
@@ -24,7 +24,32 @@ public class DialogManager : MonoBehaviour
     bool isTyping;
 
     public bool IsShowing { get; private set; }
-    public IEnumerator ShowDialog(Dialog dialog, Action onFinished=null)
+
+    public IEnumerator ShowDialogText(string text, bool waitForInput = true, bool autoClose = true)
+    {
+        IsShowing = true;
+        dialogBox.SetActive(true);
+
+        yield return TypeDialog(text);
+        if (waitForInput)
+        {
+            yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
+
+        }
+        if (autoClose)
+        {
+            CloseDialog();
+        }
+    }
+
+    public void CloseDialog()
+    {
+        Debug.Log("Close Dialog");
+        dialogBox.SetActive(false);
+        IsShowing = false;
+    }
+
+    public IEnumerator ShowDialog(Dialog dialog, Action onFinished = null)
     {
 
         yield return new WaitForEndOfFrame();
@@ -45,7 +70,7 @@ public class DialogManager : MonoBehaviour
             ++currentLine;
             if (currentLine < dialog.Lines.Count)
             {
-               StartCoroutine(TypeDialog(dialog.Lines[currentLine])); 
+                StartCoroutine(TypeDialog(dialog.Lines[currentLine]));
             }
             else
             {

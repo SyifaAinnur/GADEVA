@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 input;
 
+    public Inventory inventory;
+
     private Character character;
 
     private void Start() {

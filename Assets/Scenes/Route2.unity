@@ -2195,6 +2195,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 5464393132176613830, guid: 2cd9206a6abf7f44db1f34aa256b2f39,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5464393132176613831, guid: 2cd9206a6abf7f44db1f34aa256b2f39,
         type: 3}
       propertyPath: spawnPoint

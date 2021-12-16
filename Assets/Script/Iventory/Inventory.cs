@@ -4,7 +4,24 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] List<ItemBase> slots;
+    // [SerializeField] private GameObject inventoryUI;
+    [SerializeField]  List<ItemBase> slots;
+
+    public void LoadItem()
+    {
+        if (slots != null)
+        {
+            foreach (ItemBase item in slots)
+            {
+                transform.GetChild(item.IndexNumber).gameObject.SetActive(true);
+                // if (item.Item != null) {
+                //     item.Item.SetActive(true);
+                //     Debug.Log(item.ItemName);
+                // }
+            }
+        }
+
+    }
 
     public void AddItem(ItemBase item)
     {

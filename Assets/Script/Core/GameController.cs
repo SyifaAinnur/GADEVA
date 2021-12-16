@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-
 
 
 public enum GameState
@@ -16,6 +13,8 @@ public class GameController : MonoBehaviour
     [HideInInspector] public string namaScene;
     [SerializeField] Camera worldCamera;
 
+    [HideInInspector] public GameObject NpcAchievment;
+
 
     [SerializeField] private Pause pausebtn;
     GameState state;
@@ -26,6 +25,7 @@ public class GameController : MonoBehaviour
 
     public static GameController Instance { get; private set; }
 
+
     void Awake()
     {
         Instance = this;
@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         playerController.gameObject.SetActive(true);
-        
+
         DialogManager.Instance.OnShowDialog += () =>
         {
             state = GameState.Dialog;
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
                 state = GameState.FreeRoam;
         };
 
-        
+
     }
 
     public void PauseGame(bool pause)
@@ -110,4 +110,5 @@ public class GameController : MonoBehaviour
         PrevScene = CurrentScene;
         CurrentScene = currScene;
     }
+
 }

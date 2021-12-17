@@ -1,17 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/GamePlay.unity
+- path: Assets/Scenes/HomeTown.unity
   isLoaded: 1
   isActive: 1
-  isSubScene: 0
-- path: Assets/Scenes/Route1.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Route2.unity
-  isLoaded: 1
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Route3.unity
-  isLoaded: 1
-  isActive: 0
   isSubScene: 0

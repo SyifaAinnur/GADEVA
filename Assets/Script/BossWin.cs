@@ -12,7 +12,8 @@ public class BossWin : MonoBehaviour
     {
         nama.text = "Boss";
         chatend.transform.parent.parent.gameObject.SetActive(true);
-        chatend.text = "mantab";
+        chatend.text = "Kamu telah berhasil Mengalahkanku,\n sekarang ajak bicara orang di depan \ntoko";
+
         yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
         player.SetActive(true);
         player.GetComponent<TurnGameObject>().TurnOn();

@@ -13,6 +13,8 @@ public class BossCheckWin : MonoBehaviour
         {
             Debug.Log("Win");
             Instantiate(NpcAchievment);
+            WinCondition.SetResult(" ");
+            this.enabled = false;
         }    
     }
 }

@@ -18,14 +18,16 @@ public class GameManager : MonoBehaviour
     public int brickall;
     private GameObject player;
 
-    
+
 
     private SoundManager soundManager;
     [SerializeField] private DialogueMid win;
     [SerializeField] private Pause pausebtn;
     [SerializeField] private BossWin bosswin;
     [SerializeField] private GameObject panel;
-    
+
+    [SerializeField] GameObject ball;
+
 
     // Start is called before the first frame update
     void Start()
@@ -44,10 +46,14 @@ public class GameManager : MonoBehaviour
         Debug.Log(player.transform.parent.name);
     }
 
-    void CheckActiveScene() {
-        if (SceneManager.GetActiveScene().name == "Main") {
+    void CheckActiveScene()
+    {
+        if (SceneManager.GetActiveScene().name == "Main")
+        {
             Time.timeScale = 0;
-        } else {
+        }
+        else
+        {
             Time.timeScale = 1;
         }
     }
@@ -97,6 +103,7 @@ public class GameManager : MonoBehaviour
     }
     void Win()
     {
+        ball.SetActive(false);
         //start coroutine untuk menjalankan ienumerator
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main"))
         {
@@ -141,7 +148,8 @@ public class GameManager : MonoBehaviour
         Debug.Log("game Keluar");
     }
 
-    public void ClosePopup() {
+    public void ClosePopup()
+    {
         panel.transform.parent.gameObject.SetActive(false);
         // panel.SetActive(false);
         Time.timeScale = 1;

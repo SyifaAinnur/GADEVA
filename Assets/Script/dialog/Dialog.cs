@@ -11,3 +11,13 @@ public class Dialog
         get { return lines; }
     }
 }
+
+// [System.Serializable]
+// public class dialogAchievment : Dialog
+// {
+//     public List<string> linesAchievment;
+
+//     public List<string> Lines {
+//         get { return linesAchievment; }
+//     }
+// }

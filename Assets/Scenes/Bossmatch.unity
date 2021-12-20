@@ -1314,6 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuUI: {fileID: 722860957}
+  inventory: {fileID: 0}
 --- !u!1 &747186145 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2990538259329934824, guid: 556bab9f6eca75c45b55fc30cb82ae93,
@@ -2531,6 +2532,7 @@ MonoBehaviour:
   pausebtn: {fileID: 722860959}
   bosswin: {fileID: 1760910580}
   panel: {fileID: 0}
+  ball: {fileID: 1815314808}
 --- !u!4 &1760910578
 Transform:
   m_ObjectHideFlags: 0

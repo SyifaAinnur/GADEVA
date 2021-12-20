@@ -3234,6 +3234,7 @@ MonoBehaviour:
   pausebtn: {fileID: 1591888664}
   bosswin: {fileID: 0}
   panel: {fileID: 679676094}
+  ball: {fileID: 1815314808}
 --- !u!4 &1760910578
 Transform:
   m_ObjectHideFlags: 0

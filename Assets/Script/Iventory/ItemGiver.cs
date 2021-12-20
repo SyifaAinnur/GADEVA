@@ -5,18 +5,22 @@ using UnityEngine;
 public class ItemGiver : MonoBehaviour
 {
     [SerializeField] ItemBase item;
-    [SerializeField] Dialog dialog;
+    [SerializeField] Dialog dialogAchievment;
+
+    [HideInInspector] public AudioSource audioAchievment;
 
 
     public IEnumerator GiveItem(PlayerController player)
     {
-        yield return DialogManager.Instance.ShowDialog(dialog);
         //add item to inventory
+        // foreach (string item in dialogAchievment.linesAchievment)
+        // {
+        //     yield return DialogManager.Instance.ShowDialog(dialogAchievment);
+        // }
+        yield return DialogManager.Instance.ShowDialog(dialogAchievment, null, this.gameObject, audioAchievment);
         Debug.Log("give item" + item.ItemName);
         player.inventory.AddItem(item);
-        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space));
-        yield return DialogManager.Instance.ShowDialogText($"Gadeva Mendapatkan {item.ItemName}");
-        gameObject.SetActive(false);
+        
     }
 
     public bool CanBeGiven()

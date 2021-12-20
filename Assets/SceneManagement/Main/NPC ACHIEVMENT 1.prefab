@@ -211,6 +211,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 45d2e9e7c0f0a4943a2d73007c0d169d, type: 2}
-  dialog:
+  dialogAchievment:
     lines:
-    - Kamu Mendapatkan Hadiah
+    - aaaaaa
+    - iiiiiiiiiiii
+    - eeeee
+    - GADEVA MENDAPATKAN ACHIEVMENT 1
+  audioAchievment: {fileID: 0}

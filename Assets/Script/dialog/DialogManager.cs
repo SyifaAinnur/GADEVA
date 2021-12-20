@@ -10,6 +10,10 @@ public class DialogManager : MonoBehaviour
     [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
 
+    GameObject npcAchievment;
+
+    AudioSource audioAchievment;
+
     public event Action OnShowDialog;
     public event Action OnCloseDialog;
     public static DialogManager Instance { get; private set; }
@@ -49,7 +53,7 @@ public class DialogManager : MonoBehaviour
         IsShowing = false;
     }
 
-    public IEnumerator ShowDialog(Dialog dialog, Action onFinished = null)
+    public IEnumerator ShowDialog(Dialog dialog, Action onFinished = null, GameObject npcAchievment = null, AudioSource audioAchievment = null)
     {
 
         yield return new WaitForEndOfFrame();
@@ -57,11 +61,14 @@ public class DialogManager : MonoBehaviour
         OnShowDialog?.Invoke();
         IsShowing = true;
         this.dialog = dialog;
+        this.npcAchievment = npcAchievment;
+        this.audioAchievment = audioAchievment;
         onDialogFinished = onFinished;
 
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
+
 
     public void HandleUpdate()
     {
@@ -74,6 +81,12 @@ public class DialogManager : MonoBehaviour
             }
             else
             {
+                if (npcAchievment != null)
+                {
+                    audioAchievment.Play();
+                    npcAchievment.SetActive(false);
+                    npcAchievment = null;
+                }
                 currentLine = 0;
                 IsShowing = false;
                 dialogBox.SetActive(false);

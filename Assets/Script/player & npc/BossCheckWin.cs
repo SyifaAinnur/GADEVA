@@ -7,14 +7,15 @@ public class BossCheckWin : MonoBehaviour
 
     [SerializeField] GameObject NpcAchievment;
 
-    private void Start() 
+    private void Start()
     {
         if (WinCondition.GetResult() == name)
         {
             Debug.Log("Win");
-            Instantiate(NpcAchievment);
+            GameObject GO = Instantiate(NpcAchievment);
+            GO.GetComponent<ItemGiver>().audioAchievment = GetComponent<AudioSource>();
             WinCondition.SetResult(" ");
             this.enabled = false;
-        }    
+        }
     }
 }

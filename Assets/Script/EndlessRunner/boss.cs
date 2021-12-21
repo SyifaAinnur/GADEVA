@@ -1,0 +1,128 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class boss : MonoBehaviour
+{
+    // Start is called before the first frame update
+    private int maxLifePoint = 150;
+    private int lifePoint;
+    [SerializeField] Slider Bar;
+    [SerializeField] GameObject Virus;
+    [SerializeField] Transform Player;
+    [SerializeField] Sprite sprites;
+    float dirX, moveSpeed = 5f;
+    float timer= 5;
+    bool moveRight = true;
+    bool Tembakancinta = false;
+    int index = 0;
+    Vector3 TargetPosisi;
+    bool FindTarget = false;
+
+
+    private void Start()
+    {
+        lifePoint = maxLifePoint;
+        Bar.maxValue = lifePoint ;
+        Bar.value = Bar.maxValue ;
+    }
+
+     void Update()
+    {
+        if(timer < 0 )
+        {
+            Tembakancinta = true;
+            index = 0;
+            TargetPosisi=new Vector3(transform.position.x,Player.position.y,transform.position.z);
+            SpawnVirus();
+            timer= Random.Range(5,10);
+        }
+        else if(!Tembakancinta)
+        {
+            Movement();
+            timer -= Time.deltaTime;
+        }
+        Debug.Log(timer);
+        
+        if(FindTarget)
+        {
+            if(Vector3.Distance(transform.position,TargetPosisi)>0.5f)
+            {
+                 transform.position = Vector3.Lerp(transform.position,TargetPosisi,0.01f);
+            }
+            else
+            {
+                FindTarget=false;
+            }
+
+        }
+    }
+
+    public void kenaHatimu()
+    {
+        lifePoint --;
+        Bar.value = lifePoint ;
+        StartCoroutine(gantiperasaan());
+        if(lifePoint <= 0)
+        {
+            FindObjectOfType <BossWinEndless>().winCondition();
+            Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator gantiperasaan()
+    {
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    private void SpawnVirus()
+    {
+
+
+        if(lifePoint < maxLifePoint * 0.3f)
+        {
+            Tembakancinta = false;
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites; 
+        }
+
+        FindTarget=true;
+        
+        StartCoroutine(Recordcinta());
+        
+
+    }
+
+    private IEnumerator Recordcinta()
+    {
+        if (index < 3) 
+        {
+            yield return new WaitForSeconds(0.5f);
+            Instantiate(Virus,transform.position,Quaternion.identity);
+            index ++;
+            StartCoroutine(Recordcinta());
+            
+        }
+        else
+        {
+            Tembakancinta = false;
+        }
+       
+    }
+
+    private void Movement()
+    {
+        if (transform.position.y > 4f)
+            moveRight = false;
+        if (transform.position.y < -4f)
+            moveRight = true;
+
+        if (moveRight)
+            transform.position = new Vector2(transform.position.x, transform.position.y + moveSpeed * Time.deltaTime);
+        else
+            transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
+    }
+    
+}

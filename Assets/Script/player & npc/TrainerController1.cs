@@ -16,7 +16,7 @@ public class TrainerController1 : MonoBehaviour, Interactable
         StartCoroutine(DialogManager.Instance.ShowDialog(dialog, () =>
         {
             StopMusic();
-            SceneManager.LoadScene("main");
+            SceneManager.LoadScene("Wave1");
         }));
     }
 

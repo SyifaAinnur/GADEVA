@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Route2.unity
     guid: be692997dfc7e5441812ad65e7e69eff
+  - enabled: 1
+    path: Assets/Scenes/Wave 1.unity
+    guid: 8c3c7209a6b4f434ab3eb8269e14bc74
+  - enabled: 1
+    path: Assets/Scenes/Wave 2.unity
+    guid: 81301c71711d66c4b8b30a4f63ec3947
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

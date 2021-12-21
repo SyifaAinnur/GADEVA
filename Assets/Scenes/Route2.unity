@@ -1847,10 +1847,10 @@ GameObject:
   - component: {fileID: 496480834}
   - component: {fileID: 496480833}
   - component: {fileID: 496480832}
-  - component: {fileID: 496480831}
   - component: {fileID: 496480838}
+  - component: {fileID: 496480831}
   m_Layer: 9
-  m_Name: Trainer1
+  m_Name: Trainer2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1865,15 +1865,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 496480830}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2b64680cdb57cc4a90ba0f76b902484, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b85236bdcf59af478ea0e45f7920abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
     lines:
-    - Kau telah berani memasuki raungan ini.
-    - Ku anggap itu tanda bahwa kau telah siap menerima tantanganku.
-    - Persiapkan Dirimu
-    - Kupastikan ini tidak akan mudah!
+    - Masuk
+    - MiniGame2
 --- !u!114 &496480832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2043,7 +2041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add7f42c97716594ea579aed71dccace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NpcAchievment: {fileID: 129517317989438568, guid: 2fc9dc0564a34924a8848a841affab7c,
+  NpcAchievment: {fileID: 129517317989438568, guid: 7b44c30bf3ceaa64586e1b3d7f22613c,
     type: 3}
 --- !u!1 &569809289
 GameObject:
@@ -8321,7 +8319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122260292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6, y: -24.07, z: 609.85333}
+  m_LocalPosition: {x: -6.08, y: -16.35, z: 609.85333}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1862427326}
@@ -52839,7 +52837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047634031}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22.75, y: -13.97, z: 609.85333}
+  m_LocalPosition: {x: -17.03, y: -22.59, z: 609.85333}
   m_LocalScale: {x: 2.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1862427326}
@@ -53055,7 +53053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2094089057}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.75, y: -28.39, z: 609.85333}
+  m_LocalPosition: {x: -17.75, y: -18.56, z: 609.85333}
   m_LocalScale: {x: 2.5, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 1862427326}

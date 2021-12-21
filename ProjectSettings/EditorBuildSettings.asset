@@ -34,7 +34,10 @@ EditorBuildSettings:
     guid: 9cd9ab64894f7dd4091ff3b972f8148c
   - enabled: 1
     path: Assets/Scenes/Route2.unity
-    guid: 66d6381b9ccafdf4e92aa07d1afe8cf4
+    guid: be692997dfc7e5441812ad65e7e69eff
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Route3.unity
     guid: 40f10d257fad6a241b9520d5ce61758e

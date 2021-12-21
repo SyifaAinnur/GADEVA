@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129517317989438568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.39, y: -7.18, z: 0}
+  m_LocalPosition: {x: -0.1, y: 41.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -211,6 +211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 288d86ec0a2af6445a05a795875f6e24, type: 2}
-  dialog:
-    lines:
-    - Kamu mendapatkan Achiement
+  dialogAchievment:
+    lines: []
+  audioAchievment: {fileID: 0}

@@ -12,8 +12,10 @@ public class Ball : MonoBehaviour
     public GameManager gm;
     public Transform powerup;
     private int bouncecount;
+    private float Timer = 0;
 
-    private Vector2 LastVelocity;
+    private Vector2 LastPost;
+    private float LastPostY;
     AudioSource audio;
 
     // Start is called before the first frame update
@@ -43,11 +45,25 @@ public class Ball : MonoBehaviour
             rb.AddForce(Vector2.up * speedneeded);
 
         }
-        LastVelocity = rb.velocity;
 
+        /*if(Timer > 5)
+        {
+            if(Vector2.Distance(LastPost, transform.position)<= 0.1)
+            {
+                rb.velocity *= 2; 
+            }
 
+            Timer = 0;
+        }
+        else
+        {
+            LastPost = transform.position;
+            Timer += Time.deltaTime;
+        }*/
+        Debug.Log(rb.velocity.normalized);
     }
 
+    
 
     //wat hapen kalau kena trigger bawah
     void OnTriggerEnter2D(Collider2D other)
@@ -116,9 +132,9 @@ public class Ball : MonoBehaviour
     public void CheckVelocity()
     {
         // Debug.Log("123 '  '" + rb.velocity);
-        Vector2 velX =  new Vector2(rb.velocity.x, 0);
-        Vector2 velY = new Vector2(0, rb.velocity.y);
-        
+        //Vector2 velX =  new Vector2(rb.velocity.x, 0);
+        //Vector2 velY = new Vector2(0, rb.velocity.y);
+
         // if (Vector2.Distance(velX,velY ) < 6) 
         // {
         //     rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + speedneeded);
@@ -150,8 +166,23 @@ public class Ball : MonoBehaviour
         //         bouncecount = 0;
         //     }
         // }
+        
+        if(bouncecount == 0)
+        {
+            LastPostY = transform.position.y;
+            bouncecount++;
 
-        if (rb.velocity.y == 0)
+        }
+        else
+        {
+            if(LastPostY == transform.position.y)
+            {
+                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - 2);
+                
+            }
+            bouncecount = 0;
+        }
+        /*if (rb.velocity.y == 0)
         {
 
             bouncecount++;
@@ -165,14 +196,13 @@ public class Ball : MonoBehaviour
                 // {
                 //     rb.velocity = new Vector2(rb.velocity.x, -2);
                 // }
-                rb.velocity = new Vector2(rb.velocity.y, -2);
-                bouncecount = 0;
+                
             }
 
         }
         else
         {
             bouncecount = 0;
-        }
+        }*/
     }
 }

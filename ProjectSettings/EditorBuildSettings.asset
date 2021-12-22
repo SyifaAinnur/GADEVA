@@ -47,4 +47,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Route3.unity
     guid: 40f10d257fad6a241b9520d5ce61758e
+  - enabled: 1
+    path: Assets/Scenes/DoodleJump.unity
+    guid: 9fa48072fd5f669429a1c1411de699a0
+  - enabled: 1
+    path: Assets/Scenes/Transisi DoodleJump.unity
+    guid: 322ee1b50d0d65e488ab071d77222707
+  - enabled: 1
+    path: Assets/Scenes/Transisi DoodleJump2.unity
+    guid: 5ab7122b598df4d4f9902a035632ca7f
+  - enabled: 1
+    path: Assets/Scenes/Doodle Jump Wave 2.unity
+    guid: 35a79a33336f5cb41b5041708ecef568
   m_configObjects: {}

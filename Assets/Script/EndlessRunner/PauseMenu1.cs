@@ -9,7 +9,7 @@ public class PauseMenu1 : MonoBehaviour
     [SerializeField] TurnOffEssentialObject turnOff;
     GameObject pauseMenu;
 
-    [HideInInspector] public bool isPause = false;
+    public bool isPause = false;
 
     private void Start()
     {
@@ -22,6 +22,7 @@ public class PauseMenu1 : MonoBehaviour
     public void Pause()
     {
         if(!pauseMenu) {
+        Debug.LogError("gameobject menu diaktivkan saja"); 
         return;
         }
         pauseMenu.SetActive(true);
@@ -47,11 +48,13 @@ public class PauseMenu1 : MonoBehaviour
         isPause = false;
     }
 
-    public void Quit(string sceneName)
+    public void Quit()
     {
         turnOff.player.SetActive(true);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneName);
         isPause = false;
+        turnOff.player.GetComponent<TurnGameObject>().TurnOn();
+        turnOff.player.transform.GetChild(0).gameObject.SetActive(true);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("GamePlay");
     }
 }

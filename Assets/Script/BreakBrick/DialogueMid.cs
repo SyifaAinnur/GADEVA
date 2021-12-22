@@ -9,6 +9,8 @@ public class DialogueMid : MonoBehaviour
     [SerializeField] private Text nama;
     [SerializeField] private Text dialog;
     [SerializeField] private GameObject paneldialog;
+
+    [SerializeField] private GameObject pauseObj;
     private int spacecount = 0;
     private bool process = false;
 
@@ -21,6 +23,7 @@ public class DialogueMid : MonoBehaviour
     }
     public IEnumerator Dialogue(GameObject player)
     {
+        pauseObj.SetActive(false);
         paneldialog.SetActive(true);
         process = true;
         nama.text = "Boss";

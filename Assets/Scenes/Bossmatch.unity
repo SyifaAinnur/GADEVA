@@ -1533,6 +1533,12 @@ RectTransform:
   m_AnchoredPosition: {x: -286, y: 1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &659618579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4712556384056165208, guid: 0a7420db237e6214887bc717bd50ea65,
+    type: 3}
+  m_PrefabInstance: {fileID: 1514486367}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &672075961
 GameObject:
   m_ObjectHideFlags: 0
@@ -3422,6 +3428,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatend: {fileID: 572831564}
   nama: {fileID: 107953819}
+  pauseObj: {fileID: 659618579}
 --- !u!1 &1786138076
 GameObject:
   m_ObjectHideFlags: 0

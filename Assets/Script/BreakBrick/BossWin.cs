@@ -8,8 +8,11 @@ public class BossWin : MonoBehaviour
     [SerializeField] private Text chatend;
     [SerializeField] private Text nama;
 
+    [SerializeField] private GameObject pauseObj;
+
     public IEnumerator winBossChat(GameObject player)
     {
+        pauseObj.SetActive(false);
         nama.text = "Boss";
         chatend.transform.parent.parent.gameObject.SetActive(true);
         chatend.text = "Kamu telah berhasil Mengalahkanku,\n sekarang ajak bicara orang di depan \ntoko";

@@ -303,6 +303,16 @@ PrefabInstance:
       propertyPath: sceneToLoad
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5464393132176613880, guid: 2cd9206a6abf7f44db1f34aa256b2f39,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.07459235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464393132176613880, guid: 2cd9206a6abf7f44db1f34aa256b2f39,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 3.1835313
+      objectReference: {fileID: 0}
     - target: {fileID: 5464393132176613881, guid: 2cd9206a6abf7f44db1f34aa256b2f39,
         type: 3}
       propertyPath: m_LocalPosition.x

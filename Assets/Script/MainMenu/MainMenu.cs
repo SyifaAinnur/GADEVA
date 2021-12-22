@@ -33,6 +33,7 @@ public class MainMenu : MonoBehaviour
         GameController gc = FindObjectOfType<GameController>();
         if (gc != null)
         {
+            Debug.Log("test" + gc.namaScene);
             gc.playerController.gameObject.SetActive(true);
             FindObjectOfType<SoundManager>().GetComponent<AudioSource>().Play();
             SceneManager.LoadScene(gc.namaScene);

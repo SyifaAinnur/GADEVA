@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int maxLifePoint = 150;
+    private int maxLifePoint = 50;
     private int lifePoint;
     [SerializeField] Slider Bar;
     [SerializeField] GameObject Virus;
     [SerializeField] Transform Player;
     [SerializeField] Sprite sprites;
     float dirX, moveSpeed = 5f;
-    float timer= 5;
+    float timer = 5;
     bool moveRight = true;
     bool Tembakancinta = false;
     int index = 0;
@@ -24,36 +24,35 @@ public class boss : MonoBehaviour
     private void Start()
     {
         lifePoint = maxLifePoint;
-        Bar.maxValue = lifePoint ;
-        Bar.value = Bar.maxValue ;
+        Bar.maxValue = lifePoint;
+        Bar.value = Bar.maxValue;
     }
 
-     void Update()
+    void Update()
     {
-        if(timer < 0 )
+        if (timer < 0)
         {
             Tembakancinta = true;
             index = 0;
-            TargetPosisi=new Vector3(transform.position.x,Player.position.y,transform.position.z);
+            TargetPosisi = new Vector3(transform.position.x, Player.position.y, transform.position.z);
             SpawnVirus();
-            timer= Random.Range(5,10);
+            timer = Random.Range(5, 10);
         }
-        else if(!Tembakancinta)
+        else if (!Tembakancinta)
         {
             Movement();
             timer -= Time.deltaTime;
         }
-        Debug.Log(timer);
-        
-        if(FindTarget)
+
+        if (FindTarget)
         {
-            if(Vector3.Distance(transform.position,TargetPosisi)>0.5f)
+            if (Vector3.Distance(transform.position, TargetPosisi) > 1f)
             {
-                 transform.position = Vector3.Lerp(transform.position,TargetPosisi,0.01f);
+                transform.position = Vector3.Lerp(transform.position, TargetPosisi, 0.01f);
             }
             else
             {
-                FindTarget=false;
+                FindTarget = false;
             }
 
         }
@@ -61,12 +60,12 @@ public class boss : MonoBehaviour
 
     public void kenaHatimu()
     {
-        lifePoint --;
-        Bar.value = lifePoint ;
+        lifePoint--;
+        Bar.value = lifePoint;
         StartCoroutine(gantiperasaan());
-        if(lifePoint <= 0)
+        if (lifePoint <= 0)
         {
-            FindObjectOfType <BossWinEndless>().winCondition();
+            FindObjectOfType<BossWinEndless>().winCondition();
             Destroy(gameObject);
         }
     }
@@ -82,34 +81,37 @@ public class boss : MonoBehaviour
     {
 
 
-        if(lifePoint < maxLifePoint * 0.3f)
+        if (lifePoint < maxLifePoint * 0.4f)
         {
             Tembakancinta = false;
-            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites; 
+            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites;
+        }
+        else
+        {
+            FindTarget = true;
         }
 
-        FindTarget=true;
-        
+
         StartCoroutine(Recordcinta());
-        
+
 
     }
 
     private IEnumerator Recordcinta()
     {
-        if (index < 3) 
+        if (index < 3)
         {
             yield return new WaitForSeconds(0.5f);
-            Instantiate(Virus,transform.position,Quaternion.identity);
-            index ++;
+            Instantiate(Virus, transform.position, Quaternion.identity);
+            index++;
             StartCoroutine(Recordcinta());
-            
+
         }
         else
         {
             Tembakancinta = false;
         }
-       
+
     }
 
     private void Movement()
@@ -124,5 +126,5 @@ public class boss : MonoBehaviour
         else
             transform.position = new Vector2(transform.position.x, transform.position.y - moveSpeed * Time.deltaTime);
     }
-    
+
 }

@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class PauseMenu1 : MonoBehaviour
 {
 
+    [SerializeField] TurnOffEssentialObject turnOff;
     GameObject pauseMenu;
 
-    public bool isPause = false;
+    [HideInInspector] public bool isPause = false;
 
     private void Start()
     {
@@ -21,7 +22,6 @@ public class PauseMenu1 : MonoBehaviour
     public void Pause()
     {
         if(!pauseMenu) {
-        Debug.LogError("gameobject menu diaktivkan saja"); 
         return;
         }
         pauseMenu.SetActive(true);
@@ -41,6 +41,7 @@ public class PauseMenu1 : MonoBehaviour
 
     public void Restart()
     {
+        turnOff.player.SetActive(true);
         Time.timeScale = 1f;
         SceneManager.LoadScene("Wave 1");
         isPause = false;
@@ -48,6 +49,7 @@ public class PauseMenu1 : MonoBehaviour
 
     public void Quit(string sceneName)
     {
+        turnOff.player.SetActive(true);
         Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
         isPause = false;

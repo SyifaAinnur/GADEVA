@@ -89,7 +89,7 @@ public class Ball : MonoBehaviour
     }
     public void CheckVelocity()
     {
-        Debug.Log("exe");
+
         // Prevent ball from rolling in the same directon forever
         if (rb.velocity.x == 0)
         {
@@ -112,14 +112,15 @@ public class Ball : MonoBehaviour
             bouncecount++;
             if (bouncecount >= 2)
             {
-                if(Random.Range(0, 2) == 0)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, 2);
-                }
-                else
-                {
-                    rb.velocity = new Vector2(rb.velocity.x, -2);
-                }
+                // if(Random.Range(0, 2) == 0)
+                // {
+                //     rb.velocity = new Vector2(rb.velocity.x, 2);
+                // }
+                // else
+                // {
+                //     rb.velocity = new Vector2(rb.velocity.x, -2);
+                // }
+                rb.velocity = new Vector2(rb.velocity.x, -2);
                 bouncecount = 0;
             }
             

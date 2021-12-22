@@ -9,6 +9,8 @@ public class DialogueMidEndless : MonoBehaviour
     // [SerializeField] private Text nama;
     [SerializeField] private Text dialog;
     [SerializeField] private GameObject paneldialog;
+
+    [SerializeField] private TurnOffEssentialObject turnOff;
     private int spacecount = 0;
     private bool process = false;
 
@@ -29,6 +31,7 @@ public class DialogueMidEndless : MonoBehaviour
         yield return new WaitUntil (()=> spacecount == 1);
         dialog.text = "Ya sudah, LAWAN AKU SAJA!!!! ";
         yield return new WaitUntil (()=> spacecount == 2);
+        turnOff.player.SetActive(true);
         SceneManager.LoadScene("Wave 2");
     }
 

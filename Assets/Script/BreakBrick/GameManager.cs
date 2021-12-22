@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("start");
+
 
         //ngatur text dalem tanpa ngisi boxnya
         livesText.text = "Lives: " + lives;
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         soundManager = FindObjectOfType<SoundManager>();
         player.SetActive(false);
         player.transform.GetChild(0).gameObject.SetActive(false);
-        Debug.Log(player.transform.parent.name);
+
     }
 
     void CheckActiveScene()
@@ -107,18 +107,11 @@ public class GameManager : MonoBehaviour
         //start coroutine untuk menjalankan ienumerator
         if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Main"))
         {
-
-            player.SetActive(true);
-            player.transform.GetChild(0).gameObject.SetActive(true);
-            win.StartCoroutine(win.Dialogue());
+            win.StartCoroutine(win.Dialogue(player));
         }
         else
         {
-
-
             bosswin.StartCoroutine(bosswin.winBossChat(player));
-
-
         }
 
     }
@@ -145,7 +138,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
         SceneManager.LoadScene("GamePlay");
         //cekl apakah work
-        Debug.Log("game Keluar");
     }
 
     public void ClosePopup()

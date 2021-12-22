@@ -8,12 +8,10 @@ public class BossWinEndless : MonoBehaviour
    [SerializeField] PauseMenu1 pauseMenu;
    [SerializeField] BOSSKATA Dialogue;
    [SerializeField] GameObject pauseButton;
+   [SerializeField] TurnOffEssentialObject turnOff;
 
    public void winCondition()
    {
-       pauseMenu.isPause = true;
-       winPanel.SetActive(true);
-       pauseButton.SetActive(false);
-       Dialogue.StartCoroutine(Dialogue.winBossChat(GameObject.FindWithTag("Player")));
+       Dialogue.StartCoroutine(Dialogue.winBossChat(turnOff.player));
    }
 }

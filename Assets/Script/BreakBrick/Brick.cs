@@ -11,7 +11,7 @@ public class Brick : MonoBehaviour
     public void BreakBrick(){
         hitToBreak--;
         GetComponent<SpriteRenderer>().sprite = hitSprite;
-        Debug.Log("remok");
+
     }
 
 

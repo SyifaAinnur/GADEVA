@@ -638,6 +638,7 @@ MonoBehaviour:
   playerController: {fileID: 4311885896757780038}
   namaScene: 
   worldCamera: {fileID: 4311885896011171440}
+  NpcAchievment: {fileID: 0}
   pausebtn: {fileID: 7701948900112014841}
 --- !u!114 &4311885896654628077
 MonoBehaviour:
@@ -1114,7 +1115,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: e2a14529cbd70314292cb5544df1d968,
+      objectReference: {fileID: 21300000, guid: 3c72345993c350046a9b64fa4d09dd44,
         type: 3}
     - target: {fileID: 4712556384056165211, guid: 0a7420db237e6214887bc717bd50ea65,
         type: 3}
@@ -1546,6 +1547,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -30
       objectReference: {fileID: 0}
+    - target: {fileID: 3161165907772032785, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161165908128616222, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161165908128616222, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161165908128616222, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 378.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161165908128616222, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 115.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3161165908353545138, guid: a297b58d0d70c4c4a842ada8765107f4,
         type: 3}
       propertyPath: m_IsActive
@@ -1589,12 +1615,12 @@ PrefabInstance:
     - target: {fileID: 3161165908597546786, guid: a297b58d0d70c4c4a842ada8765107f4,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 224.05
+      value: 189.45
       objectReference: {fileID: 0}
     - target: {fileID: 3161165908597546786, guid: a297b58d0d70c4c4a842ada8765107f4,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -89.35
+      value: -77.8
       objectReference: {fileID: 0}
     - target: {fileID: 3161165908784201494, guid: a297b58d0d70c4c4a842ada8765107f4,
         type: 3}
@@ -1710,6 +1736,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3161165909165157238, guid: a297b58d0d70c4c4a842ada8765107f4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -66
       objectReference: {fileID: 0}
     - target: {fileID: 4121569028167626387, guid: a297b58d0d70c4c4a842ada8765107f4,
         type: 3}

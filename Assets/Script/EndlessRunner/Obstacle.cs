@@ -5,13 +5,6 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
 
-    private GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.name == "Side Borders")
@@ -21,14 +14,10 @@ public class Obstacle : MonoBehaviour
 
         else if(collision.tag == "Player")
         {
-            Destroy(player.gameObject);
+            Destroy(collision.gameObject);
         }
     }
 
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

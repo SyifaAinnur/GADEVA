@@ -9,7 +9,7 @@ public class PlayerEndless : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 playerDirection;
     [SerializeField] GameObject winPannel;
-    [SerializeField] DialogueMid Dialogue;
+    [SerializeField] DialogueMidEndless Dialogue;
     [SerializeField] GameObject pauseButton;
     // Start is called before the first frame update
     void Start()

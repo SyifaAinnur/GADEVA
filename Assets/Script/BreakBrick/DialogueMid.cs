@@ -19,16 +19,18 @@ public class DialogueMid : MonoBehaviour
             spacecount++;
         }
     }
-    public IEnumerator Dialogue()
+    public IEnumerator Dialogue(GameObject player)
     {
         paneldialog.SetActive(true);
         process = true;
         nama.text = "Boss";
         dialog.text = "Sial, kau terlalu kuat ";
         //yield return untuk memulai urutan/antrian(tidak tereksekusi bila tidak kena trigger)
-        yield return new WaitUntil (()=> spacecount == 1);
+        yield return new WaitUntil(() => spacecount == 1);
         dialog.text = "Ya sudah, LAWAN AKU SAJA!!!! ";
-        yield return new WaitUntil (()=> spacecount == 2);
+        yield return new WaitUntil(() => spacecount == 2);
+        player.SetActive(true);
+        player.transform.GetChild(0).gameObject.SetActive(true);
         SceneManager.LoadScene("Bossmatch");
     }
 

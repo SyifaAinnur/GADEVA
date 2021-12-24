@@ -9,8 +9,14 @@ public class StartPanel : MonoBehaviour
     void Start()
     {
 
-
-        Time.timeScale = 0f;
+        if (SceneManager.GetActiveScene().name == "DoodleJump")
+        {
+            Time.timeScale = 1;
+        }
+        else 
+        {
+            Time.timeScale = 0f;
+        }
 
     }
 

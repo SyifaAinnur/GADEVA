@@ -7,14 +7,17 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Side Borders")
+        if (collision.name == "Side Borders")
         {
             Destroy(this.gameObject);
         }
 
-        else if(collision.tag == "Player")
+        else if (collision.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            PlayerEndless pe = collision.GetComponent<PlayerEndless>();
+            pe.StartCoroutine(pe.KenaTembak());
+            Destroy(this.gameObject);
+
         }
     }
 

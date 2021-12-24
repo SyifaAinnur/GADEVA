@@ -12,13 +12,8 @@ public class LoseMenu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1f;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //losePanel.gameObject.SetActive(false);
-        //int scene = SceneManager.GetActiveScene().buildIndex;
-        //SceneManager.LoadScene(scene, LoadSceneMode.Single);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene("DoodleJump");
-        //isPause = false;
+        SceneManager.LoadScene("DoodleJump");
+
     }
 
     public void Quit(int sceneID)

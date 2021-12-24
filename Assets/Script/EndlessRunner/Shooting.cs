@@ -5,7 +5,11 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
     [SerializeField] PauseMenu1 pauseMenu;
-    [SerializeField] Sprite [] Player;
+    [SerializeField] Sprite[] Player;
+
+    
+
+    [SerializeField] GameObject StartPanel;
 
     public GameObject bulletPrefab;
 
@@ -18,7 +22,7 @@ public class Shooting : MonoBehaviour
 
     private void Start()
     {
-       
+
     }
 
     // Update is called once per frame
@@ -29,12 +33,12 @@ public class Shooting : MonoBehaviour
         //     isStarted = true;
         // }
 
-      
-            if (Input.GetButtonDown("Fire1") && !pauseMenu.isPause)
-            {
-                Shoot();
-            }
-        
+
+        if (Input.GetButtonDown("Fire1") && !pauseMenu.isPause && !StartPanel.activeSelf)
+        {
+            Shoot();
+        }
+
 
         // if(panel.activeInHierarchy)
         // {
@@ -44,10 +48,10 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, transform.GetChild(1).position,Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, transform.GetChild(1).position, Quaternion.identity);
         StartCoroutine(GantiHati());
-
-         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        bullet.GetComponent<Bullet>().player = transform;
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         // SoundManager.PlaySound("shoot");
         rb.AddForce(Vector3.right * bulletForce, ForceMode2D.Impulse);
@@ -56,7 +60,7 @@ public class Shooting : MonoBehaviour
     private IEnumerator GantiHati()
     {
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Player[1];
-        yield return new WaitForSeconds (0.1f);
+        yield return new WaitForSeconds(0.1f);
         transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = Player[0];
     }
 

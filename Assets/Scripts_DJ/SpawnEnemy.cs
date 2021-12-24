@@ -41,7 +41,7 @@ public class SpawnEnemy : MonoBehaviour
                 isStarted = true;
                 Invoke("Allow", 5f);
                 InvokeRepeating("SpawnAnEnemy", 0f, 5f);
-            } 
+            }
         }
         if (losemenu.activeInHierarchy)
         {
@@ -60,38 +60,28 @@ public class SpawnEnemy : MonoBehaviour
 
     void SpawnAnEnemy()
     {
-        if (spawnAllowed==true)
+        if (spawnAllowed == true)
         {
-            randomSpawnPoint = Random.Range(0, spawnPoints.Length);
-            //randomEnemy = Random.Range(0, enemy.Length);
-            //instantiatedObj = (GameObject) Instantiate(enemy[randomEnemy], spawnPoints[randomSpawnPoint].position, Quaternion.identity);
-            //if (spawnPoints.Length < 0)
-            //{
-            //    enemy.GetComponent<SpriteRenderer>().flipX = true;
-            //}
-            var spawnPosition = spawnPoints[randomSpawnPoint].position;
-            //instantiatedObj = (GameObject)Instantiate(enemy, spawnPosition, Quaternion.identity);
             //enemy.GetComponent<SpriteRenderer>().flipX = false;
-
             Scene currentScene = SceneManager.GetActiveScene();
             string sceneName = currentScene.name;
             if (sceneName == "DoodleJump")
             {
-                if (spawnPosition.x < 0)
-                {
-                    instantiatedObj = (GameObject)Instantiate(enemyKiri, spawnPosition, Quaternion.identity);
-                    SoundManagerDoodle.PlaySound("enemy");
-                }
+                var spawnPosition = spawnPoints[1].position;
 
-                else
-                {
-                    instantiatedObj = (GameObject)Instantiate(enemy, spawnPosition, Quaternion.identity);
-                    SoundManagerDoodle.PlaySound("enemy");
-                }
+                instantiatedObj = (GameObject)Instantiate(enemyKiri, spawnPosition, Quaternion.identity);
+                SoundManagerDoodle.PlaySound("enemy");
+
+                spawnPosition = spawnPoints[0].position;
+
+                instantiatedObj = (GameObject)Instantiate(enemy, spawnPosition, Quaternion.identity);
+                SoundManagerDoodle.PlaySound("enemy");
             }
 
             if (sceneName == "Doodle Jump Wave 2")
             {
+                randomSpawnPoint = Random.Range(0, spawnPoints.Length);
+                var spawnPosition = spawnPoints[randomSpawnPoint].position;
                 if (spawnPosition.x < 0)
                 {
                     instantiatedObj = (GameObject)Instantiate(Mini_enemyKiri, spawnPosition, Quaternion.identity);

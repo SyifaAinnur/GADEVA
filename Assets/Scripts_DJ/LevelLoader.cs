@@ -9,17 +9,6 @@ public class LevelLoader : MonoBehaviour
     public float transitionTime = 0.8f;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel());

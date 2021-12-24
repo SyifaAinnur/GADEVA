@@ -105,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8614216037257991283}
   - component: {fileID: 8614216037257991282}
+  - component: {fileID: 1198597229656409939}
   m_Layer: 0
   m_Name: CollisionEnemy
   m_TagString: Untagged
@@ -152,6 +153,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.5850968, y: 5.4931164}
   m_EdgeRadius: 0
+--- !u!114 &1198597229656409939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8614216037257991292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ba83fd1795a3a42952dce839d2df50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8614216038593614889
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +355,8 @@ MonoBehaviour:
   textArea: {fileID: 0}
   spawn: {fileID: 0}
   progressbar: {fileID: 0}
+  turnOff: {fileID: 0}
+  startPanel: {fileID: 0}
 --- !u!114 &8614216039184811347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,8 +371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouth: {fileID: 8614216037249588709}
   panel: {fileID: 0}
-  dialogue: {fileID: 7421907576683754788, guid: 021953e82ef8b9948954d82631d9d1dd,
-    type: 3}
+  textArea: {fileID: 0}
 --- !u!114 &8614216039184811346
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -35,6 +35,8 @@ public class Controller_W2 : MonoBehaviour
     DialogueTrigger dialogueTrigger;
     DialogueManager dialogueManager;
 
+    [SerializeField] TurnOffEssentialObject turnOff;
+
     // Start is called before the first frame update
     void Start()
     {

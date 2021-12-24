@@ -12,38 +12,52 @@ public class SpawnObstacles : MonoBehaviour
     public float minY;
     public float timeBetweenSpawn;
     private float spawnTime;
+
+    private Vector2 lastObstaclePosition;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > spawnTime)
+        if (Time.time > spawnTime)
         {
-            Spawn();
+            int index = 0;
+            while (index < 2)
+            {
+                Spawn();
+                index++;
+            }
             spawnTime = Time.time + timeBetweenSpawn;
         }
     }
 
     void Spawn()
     {
-        float randomX = Random.Range(minX, maxX);
-        float randomY = Random.Range(minY, maxY);
-        int randomV = Random.Range(0,2);
         
+        Vector3 spawnPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
         
-        switch(randomV)
+        while (Vector3.Distance(spawnPosition ,lastObstaclePosition) < 2)
         {
-         case 0:
-         Instantiate(Obstacle, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
-         break;
+            spawnPosition = new Vector3(Random.Range(minX, maxX), Random.Range(minY, maxY), 0);
+        }
+        lastObstaclePosition = spawnPosition;
+        
+        int randomV = Random.Range(0, 2);
 
-         case 1:
-         Instantiate(Obstacle1, transform.position + new Vector3(randomX, randomY, 0), transform.rotation);
-         break;
+
+        switch (randomV)
+        {
+            case 0:
+                Instantiate(Obstacle, transform.position + spawnPosition, transform.rotation);
+                break;
+
+            case 1:
+                Instantiate(Obstacle1, transform.position + spawnPosition, transform.rotation);
+                break;
 
         }
     }

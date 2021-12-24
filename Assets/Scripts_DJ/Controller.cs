@@ -36,7 +36,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         rb2d = GetComponent<Rigidbody2D>();
         progressbar = GameObject.FindObjectOfType<ProgressBar>();
 
@@ -66,7 +66,7 @@ public class Controller : MonoBehaviour
 
             if (PauseMenu.isPause == false)
             {
-                
+
                 isStarted = true;
                 startText.gameObject.SetActive(false);
                 losemenu.gameObject.SetActive(false);
@@ -124,12 +124,6 @@ public class Controller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            GameOver();
-            //isStarted = false;
-        }
-
         if (collision.gameObject.tag == "winPlat")
         {
             Win();

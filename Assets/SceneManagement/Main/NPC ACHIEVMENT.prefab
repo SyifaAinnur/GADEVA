@@ -73,8 +73,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1053441763
-  m_SortingLayer: 1
+  m_SortingLayerID: 2035432897
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -8922328891513336043, guid: 050fc9bcc62600a4aa79ababc4fecdc3,
     type: 3}
@@ -212,5 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 199a6824be155e24cb2eeab9b07d5248, type: 2}
   dialogAchievment:
-    lines: []
+    lines:
+    - hahahaha
+    - hihihihihihi
   audioAchievment: {fileID: 0}

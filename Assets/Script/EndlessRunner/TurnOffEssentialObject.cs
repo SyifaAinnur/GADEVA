@@ -11,7 +11,10 @@ public class TurnOffEssentialObject : MonoBehaviour
     void Start()
     {
         player = FindObjectOfType<PlayerController>().gameObject;
+        player.GetComponent<TurnGameObject>().TurnOff();
+        Transisi.SetPlayer(player);
         player.SetActive(false);
+        //Debug.Log(player.name);
     }
 
     // Update is called once per frame

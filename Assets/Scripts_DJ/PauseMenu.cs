@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] TurnOffEssentialObject turnOff;
     public static bool isPause = false;
-    
+
 
     public void Pause()
     {
@@ -26,12 +26,10 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        Time.timeScale = 1f;
-        //int scene = SceneManager.GetActiveScene().buildIndex;
-        //SceneManager.LoadScene(scene, LoadSceneMode.Single);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //SceneManager.LoadScene();
+        turnOff.player.SetActive(true);
         isPause = false;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("DoodleJump");
     }
 
     public void Quit()

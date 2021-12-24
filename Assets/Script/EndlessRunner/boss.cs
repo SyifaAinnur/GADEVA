@@ -6,13 +6,13 @@ using UnityEngine.UI;
 public class boss : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int maxLifePoint = 50;
+    private int maxLifePoint = 100;
     private int lifePoint;
     [SerializeField] Slider Bar;
     [SerializeField] GameObject Virus;
     [SerializeField] Transform Player;
     [SerializeField] Sprite sprites;
-    float dirX, moveSpeed = 5f;
+    float dirX, moveSpeed = 8f;
     float timer = 5;
     bool moveRight = true;
     bool Tembakancinta = false;

@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         if (sentences.Count == 0)
         {
-            Debug.Log("Nothing");
+
             return;
         }
     }
@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (PauseMenu.isPause == true)
@@ -37,11 +38,11 @@ public class DialogueManager : MonoBehaviour
             {
                 DisplayNextSentence();
             }
-            
+
         }
     }
 
-    public void StartDialogue (Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue)
     {
         //Debug.Log("Starting conversation with " + dialogue.name);
 
@@ -61,12 +62,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (sentences.Count == 0)
         {
-            Debug.Log("Nothing");
+
             return;
         }
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
-        if (sentences.Count ==0)
+        if (sentences.Count == 0)
         {
             EndDialogue();
             return;
@@ -84,11 +85,18 @@ public class DialogueManager : MonoBehaviour
             //SceneManager.LoadScene("Transisi DoodleJump");
             levelLoader = FindObjectOfType<LevelLoader>();
             levelLoader.LoadNextLevel();
+            Time.timeScale = 1;
         }
         if (sceneName == "Doodle Jump Wave 2")
         {
-            SceneManager.LoadScene("Diisi nanti");
-            
+            Transisi.GetPlayer().SetActive(true);
+            Transisi.GetPlayer().GetComponent<TurnGameObject>().TurnOn();
+            // player.transform.GetChild(0).gameObject.SetActive(true);
+            Time.timeScale = 1;
+            Debug.Log("back to main game");
+            WinCondition.SetResult("Trainer3");
+            SceneManager.LoadScene("GamePlay");
+
         }
     }
 }

@@ -5,30 +5,17 @@ using UnityEngine.UI;
 
 public class HealthTextScript : MonoBehaviour
 {
-    public Text text;
-    public static int healthAmount = 50;
-    public Controller_W2 controller;
+    [HideInInspector] public Text text;
+    public static int healthAmount = 5;
+    [SerializeField] Controller controller;
 
     // Start is called before the first frame update
     void Start()
     {
         text = GetComponent<Text>();
-        healthAmount = 50;
-}
+        healthAmount = 5;
+    }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (healthAmount <= 0)
-        {
-            healthAmount = 0;
-            controller = FindObjectOfType<Controller_W2>();
-            controller.GameOver();
-            this.enabled = false;
-        }
 
-        text.text = healthAmount.ToString();
-
-        
-    }
 }

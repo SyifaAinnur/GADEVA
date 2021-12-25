@@ -213,6 +213,8 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 199a6824be155e24cb2eeab9b07d5248, type: 2}
   dialogAchievment:
     lines:
-    - hahahaha
-    - hihihihihihi
+    - kamu sudah mengalahkan boss ke 3
+    - sebagai gantinya ku beri hadiah
+    - Gadeva Mendapatkan Achievment 3
+    - Akan ku tunggu di route selanjutnya
   audioAchievment: {fileID: 0}

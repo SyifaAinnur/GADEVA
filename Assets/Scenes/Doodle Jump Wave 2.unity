@@ -4229,7 +4229,7 @@ MonoBehaviour:
   - {x: 0, y: 5.616, z: 0}
   isStarted: 0
   losePanel: {fileID: 1263988284}
-  maxHealth: 10
+  maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 77559976}
   controller: {fileID: 0}
@@ -4702,7 +4702,7 @@ MonoBehaviour:
   m_Text: 'SHOOT:
 
 
-    LEFT CLIK'
+    LEFT MOUSE BUTTON'
 --- !u!222 &1211535384
 CanvasRenderer:
   m_ObjectHideFlags: 0

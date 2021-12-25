@@ -29,7 +29,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
         if (gm.gameover == true)
         {
             return;
@@ -63,7 +63,7 @@ public class Ball : MonoBehaviour
         Debug.Log(rb.velocity.normalized);
     }
 
-    
+
 
     //wat hapen kalau kena trigger bawah
     void OnTriggerEnter2D(Collider2D other)
@@ -83,12 +83,12 @@ public class Ball : MonoBehaviour
         CheckVelocity();
         if (other.transform.CompareTag("paddle"))
         {
-             
-            if (rb.velocity.x <= 0.1f)
-            {
-                // Debug.Log("bismillah" + (transform.position.x - other.transform.position.x * 4));
-                rb.velocity = new Vector2((transform.position.x - other.transform.position.x) * 4, rb.velocity.y);
-            }
+
+            // if (rb.velocity.x <= 0.1f)
+            // {
+            //     Debug.Log("bismillah" + (transform.position.x - other.transform.position.x * 4));
+            //     rb.velocity = new Vector2((transform.position.x - other.transform.position.x) * 4, rb.velocity.y);
+            // }
         }
         if (other.transform.CompareTag("brick"))
         {
@@ -166,8 +166,8 @@ public class Ball : MonoBehaviour
         //         bouncecount = 0;
         //     }
         // }
-        
-        if(bouncecount == 0)
+
+        if (bouncecount == 0)
         {
             LastPostY = transform.position.y;
             bouncecount++;
@@ -175,10 +175,10 @@ public class Ball : MonoBehaviour
         }
         else
         {
-            if(LastPostY == transform.position.y)
+            if (LastPostY == transform.position.y)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - 2);
-                
+
             }
             bouncecount = 0;
         }

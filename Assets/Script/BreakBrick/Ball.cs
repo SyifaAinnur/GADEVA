@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour
     private float LastPostY;
     AudioSource audio;
 
+    [SerializeField] GameObject startPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,11 +41,10 @@ public class Ball : MonoBehaviour
             transform.position = paddle.position;
         }
 
-        if (Input.GetButtonDown("Jump") && !inPlay)
+        if (Input.GetButtonDown("Jump") && !inPlay && startPanel.activeSelf == false)
         {
             inPlay = true;
             rb.AddForce(Vector2.up * speedneeded);
-
         }
 
         /*if(Timer > 5)
@@ -80,16 +81,16 @@ public class Ball : MonoBehaviour
     //wat happen kalau nabrak box
     void OnCollisionEnter2D(Collision2D other)
     {
-        CheckVelocity();
-        if (other.transform.CompareTag("paddle"))
-        {
+        // CheckVelocity();
+        // if (other.transform.CompareTag("paddle"))
+        // {
 
-            // if (rb.velocity.x <= 0.1f)
-            // {
-            //     Debug.Log("bismillah" + (transform.position.x - other.transform.position.x * 4));
-            //     rb.velocity = new Vector2((transform.position.x - other.transform.position.x) * 4, rb.velocity.y);
-            // }
-        }
+        //     if (rb.velocity.x <= 0.1f)
+        //     {
+        //         Debug.Log("bismillah" + (transform.position.x - other.transform.position.x * 4));
+        //         rb.velocity = new Vector2((transform.position.x - other.transform.position.x) * 4, rb.velocity.y);
+        //     }
+        // }
         if (other.transform.CompareTag("brick"))
         {
             //baru sampe sini

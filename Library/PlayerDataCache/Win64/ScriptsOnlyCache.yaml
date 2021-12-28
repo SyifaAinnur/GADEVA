@@ -113,8 +113,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -303,6 +305,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13026}
     - Class: 114
       Script: {instanceID: 13130}
+    - Class: 114
+      Script: {instanceID: 13148}
     - Class: 114
       Script: {instanceID: 13166}
     - Class: 114
@@ -1657,6 +1661,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 82
       Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -1729,6 +1735,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
     Assets/Scenes/Wave 2.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -1763,6 +1775,8 @@ ScriptsOnlyBuild:
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -1837,6 +1851,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -2039,7 +2059,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: df49929c85a7afbd7278b4e8c762c1e5
+      Hash: cc932758640cd9846fee77c5a178f869
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ShootingDoodle
@@ -2195,7 +2215,7 @@ ScriptsOnlyBuild:
     className: GameLayers
   - hash:
       serializedVersion: 2
-      Hash: cf69b0fcd3c1d29639e8141049bf1469
+      Hash: 07362036573f559dc12c3f2120d9f59f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Controller_W2
@@ -2291,7 +2311,7 @@ ScriptsOnlyBuild:
     className: Paddle
   - hash:
       serializedVersion: 2
-      Hash: 70d70dc72d564e072f222563154d32b1
+      Hash: bcaa8b4e42e35f6f0485f2c867e8733b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossWinEndless
@@ -2435,7 +2455,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: fdf04abe2b8198cc005f1fca3796e693
+      Hash: 3785c4114504c638175ead6b32c67365
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -2513,7 +2533,7 @@ ScriptsOnlyBuild:
     className: DialogueTrigger
   - hash:
       serializedVersion: 2
-      Hash: c8c54898d1abcf62577806557155dc36
+      Hash: 5d470f58672fc34119c7ae1e5d608895
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpawnEnemy
@@ -2777,13 +2797,13 @@ ScriptsOnlyBuild:
     className: PlayerHealthBar
   - hash:
       serializedVersion: 2
-      Hash: b2c319e27c5b61f6344205c1128f53db
+      Hash: 17d77bd4f9e9561bd8468b044b5cefb4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChangeSprite
   - hash:
       serializedVersion: 2
-      Hash: 35004d2ca95912f3365a807d4b82c1a7
+      Hash: f86c55087fac89ae2b2f1c5d84bfb058
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossController
@@ -2885,7 +2905,7 @@ ScriptsOnlyBuild:
     className: SpawnObstacles
   - hash:
       serializedVersion: 2
-      Hash: 54568f1f88a7116d4fe58c0a2c639dcb
+      Hash: 95ac0f5eee73f744482030d430ff4704
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerEndless
@@ -2938,4 +2958,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Transisi DoodleJump.unity
   - Assets/Scenes/Transisi DoodleJump2.unity
   - Assets/Scenes/Doodle Jump Wave 2.unity
-  playerPath: D:/projectAkhir/TestGame/New folder/Build V1.4/TestGame.exe
+  playerPath: D:/projectAkhir/TestGame/New folder/Build V1.5/TestGame.exe

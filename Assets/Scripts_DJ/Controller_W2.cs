@@ -37,6 +37,8 @@ public class Controller_W2 : MonoBehaviour
 
     [SerializeField] TurnOffEssentialObject turnOff;
 
+    [SerializeField] GameObject startPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -62,7 +64,7 @@ public class Controller_W2 : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false && startPanel.activeSelf == false)
         {
             if (PauseMenu.isPause == true)
             {

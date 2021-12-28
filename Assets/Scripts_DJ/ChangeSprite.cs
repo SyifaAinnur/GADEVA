@@ -13,6 +13,8 @@ public class ChangeSprite : MonoBehaviour
     private bool isStarted = false;
     private bool allowChange = false;
 
+    [SerializeField] GameObject startPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,7 @@ public class ChangeSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false && startPanel.activeSelf == false)
         {
             if (PauseMenu.isPause == true)
             {

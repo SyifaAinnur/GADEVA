@@ -22,6 +22,8 @@ public class SpawnEnemy : MonoBehaviour
 
     public MonsterController monscon;
 
+    [SerializeField] GameObject startPanel;
+
     private void Start()
     {
         spawnAllowed = false;
@@ -30,7 +32,7 @@ public class SpawnEnemy : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false && startPanel.activeSelf == false)
         {
             if (PauseMenu.isPause == true)
             {
@@ -60,7 +62,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void SpawnAnEnemy()
     {
-        if (spawnAllowed == true)
+        if (spawnAllowed == true )
         {
             //enemy.GetComponent<SpriteRenderer>().flipX = false;
             Scene currentScene = SceneManager.GetActiveScene();

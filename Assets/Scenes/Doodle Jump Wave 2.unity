@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1172,6 +1172,7 @@ MonoBehaviour:
   losemenu: {fileID: 1263988284}
   panel: {fileID: 1356346437}
   monscon: {fileID: 4388755196056190776, guid: 8fdd3921adbc57f45b62804c6faf65e7, type: 3}
+  startPanel: {fileID: 951009977}
 --- !u!4 &197532623
 Transform:
   m_ObjectHideFlags: 0
@@ -2294,7 +2295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1981761335}
-  turnOff: {fileID: 0}
+  turnOff: {fileID: 873329930}
 --- !u!114 &557892786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2795,6 +2796,11 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1356346437}
+    - target: {fileID: 8614216039184811346, guid: a847a8d3ef584c7449411b4be6bc08f1,
+        type: 3}
+      propertyPath: startPanel
+      value: 
+      objectReference: {fileID: 951009977}
     - target: {fileID: 8614216039184811347, guid: a847a8d3ef584c7449411b4be6bc08f1,
         type: 3}
       propertyPath: panel
@@ -2805,6 +2811,11 @@ PrefabInstance:
       propertyPath: textArea
       value: 
       objectReference: {fileID: 734583998}
+    - target: {fileID: 8614216039184811347, guid: a847a8d3ef584c7449411b4be6bc08f1,
+        type: 3}
+      propertyPath: startPanel
+      value: 
+      objectReference: {fileID: 951009977}
     - target: {fileID: 8614216039184811353, guid: a847a8d3ef584c7449411b4be6bc08f1,
         type: 3}
       propertyPath: m_Name
@@ -2959,7 +2970,8 @@ MonoBehaviour:
   bossController: {fileID: 0}
   damageFlicker: {fileID: 0}
   playerHealthBar: {fileID: 46240346}
-  turnOff: {fileID: 0}
+  turnOff: {fileID: 873329930}
+  startPanel: {fileID: 951009977}
 --- !u!114 &744775061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3221,6 +3233,7 @@ GameObject:
   - component: {fileID: 873329929}
   - component: {fileID: 873329932}
   - component: {fileID: 873329931}
+  - component: {fileID: 873329930}
   m_Layer: 0
   m_Name: Doodle Jump Camera
   m_TagString: MainCamera
@@ -3248,6 +3261,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &873329930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873329928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2157ab3916f597242a91e5d3f2fb98ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!81 &873329931
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3891,7 +3917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -4245,6 +4271,7 @@ MonoBehaviour:
   jurusBoss: {fileID: 1778004979}
   sprite: {fileID: 0}
   damageFlicker: {fileID: 1080359976}
+  startPanel: {fileID: 951009977}
 --- !u!114 &1080359976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,12 +11,20 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float speed;
     [SerializeField] private GameObject[] position;
+
+    [SerializeField] GameObject startPanel;
     // Start is called before the first frame update
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(TargetPos);
+
+        if (startPanel.activeSelf == true)
+        {
+            return;
+        }
+
+
         if (Vector3.Distance(transform.position, TargetPos) < 0.2f)
         {
             TargetPos = position[Random.Range(0, position.Length)].transform.position;

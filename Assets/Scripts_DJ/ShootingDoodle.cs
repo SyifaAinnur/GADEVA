@@ -14,16 +14,13 @@ public class ShootingDoodle : MonoBehaviour
 
     public GameObject panel;
 
-
-    private void Start()
-    {
-       
-    }
-
+    [SerializeField] GameObject startPanel;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        Debug.Log("1"+startPanel.activeSelf);
+        Debug.Log("3"+isStarted);
+        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false && startPanel.activeSelf == false)
         {
             if (PauseMenu.isPause == true)
             {
@@ -35,10 +32,10 @@ public class ShootingDoodle : MonoBehaviour
                 isStarted = true;
                 allowShoot = true;
             }
-            
+
         }
 
-        if(PauseMenu.isPause == false)
+        if (PauseMenu.isPause == false ) 
         {
             if (Input.GetButtonDown("Fire1") && isStarted == true && allowShoot == true)
             {
@@ -46,7 +43,7 @@ public class ShootingDoodle : MonoBehaviour
             }
         }
 
-        if(panel.activeInHierarchy)
+        if (panel.activeInHierarchy)
         {
             allowShoot = false;
         }
@@ -56,7 +53,7 @@ public class ShootingDoodle : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 
-         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
         SoundManagerDoodle.PlaySound("shoot");
         rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);

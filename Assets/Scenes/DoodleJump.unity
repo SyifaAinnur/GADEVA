@@ -2009,6 +2009,7 @@ MonoBehaviour:
   losemenu: {fileID: 1571560365}
   panel: {fileID: 1705333458}
   monscon: {fileID: 4388755196056190776, guid: 8fdd3921adbc57f45b62804c6faf65e7, type: 3}
+  startPanel: {fileID: 1734475436}
 --- !u!4 &1004387323
 Transform:
   m_ObjectHideFlags: 0
@@ -4690,6 +4691,11 @@ PrefabInstance:
       propertyPath: panel
       value: 
       objectReference: {fileID: 1705333458}
+    - target: {fileID: 8614216039184811346, guid: a847a8d3ef584c7449411b4be6bc08f1,
+        type: 3}
+      propertyPath: startPanel
+      value: 
+      objectReference: {fileID: 1734475436}
     - target: {fileID: 8614216039184811347, guid: a847a8d3ef584c7449411b4be6bc08f1,
         type: 3}
       propertyPath: panel
@@ -4700,6 +4706,11 @@ PrefabInstance:
       propertyPath: textArea
       value: 
       objectReference: {fileID: 853298766}
+    - target: {fileID: 8614216039184811347, guid: a847a8d3ef584c7449411b4be6bc08f1,
+        type: 3}
+      propertyPath: startPanel
+      value: 
+      objectReference: {fileID: 1734475436}
     - target: {fileID: 8614216039184811353, guid: a847a8d3ef584c7449411b4be6bc08f1,
         type: 3}
       propertyPath: m_Name

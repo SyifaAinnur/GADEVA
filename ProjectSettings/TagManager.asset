@@ -7,6 +7,17 @@ TagManager:
   - special
   - brick
   - NPC ACHIEVMENT
+  - bottom
+  - paddle
+  - Border
+  - winPlat
+  - Destroyer
+  - Enemy
+  - Bullet
+  - Suriken
+  - HeadBoss
+  - KillBoss
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -20,8 +31,8 @@ TagManager:
   - Interactable
   - Player
   - Portal
-  - 
-  - 
+  - BackgroundBelakang
+  - BackgroundDepan
   - 
   - 
   - 
@@ -52,4 +63,10 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2035432897
+    locked: 0
+  - name: BackgroundBelakang
+    uniqueID: 2130270789
+    locked: 0
+  - name: BackgroundDepan
+    uniqueID: 1940161919
     locked: 0

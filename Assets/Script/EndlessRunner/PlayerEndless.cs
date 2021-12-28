@@ -12,8 +12,8 @@ public class PlayerEndless : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 playerDirection;
 
-    private int HealtPoint = 3;
-    [SerializeField] GameObject winPannel;
+    private int HealtPoint = 5;
+    // [SerializeField] GameObject winPannel;
     [SerializeField] DialogueMidEndless Dialogue;
     [SerializeField] GameObject pauseButton;
     [SerializeField] Text HealtPointText;
@@ -73,7 +73,6 @@ public class PlayerEndless : MonoBehaviour
         if (collision.name == "Side Borders (1)")
         {
             Time.timeScale = 0f;
-            winPannel.SetActive(true);
             pauseButton.SetActive(false);
             Dialogue.StartCoroutine(Dialogue.Dialogue());
         }
@@ -88,11 +87,9 @@ public class PlayerEndless : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false;
-        GetComponent<PolygonCollider2D>().enabled = false;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
-        transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
-        GetComponent<PolygonCollider2D>().enabled = true;
+        transform.GetChild(0).GetComponent<SpriteRenderer>().color = Color.white;
     }
 
 

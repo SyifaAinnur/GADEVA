@@ -249,9 +249,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2035432897
-  m_SortingLayer: 3
-  m_SortingOrder: 3
+  m_SortingLayerID: -834454379
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -9434,22 +9434,22 @@ PrefabInstance:
     - target: {fileID: 5151136215930912797, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 138.20001
+      value: 144
       objectReference: {fileID: 0}
     - target: {fileID: 5151136215930912797, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 79.99997
+      value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 5151136215930912797, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: -276.4
+      value: -387.59998
       objectReference: {fileID: 0}
     - target: {fileID: 5151136215930912797, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 160
+      value: 171.6
       objectReference: {fileID: 0}
     - target: {fileID: 5151136215930912797, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
@@ -9504,7 +9504,7 @@ PrefabInstance:
     - target: {fileID: 5151136215930912802, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5151136217073118278, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
@@ -9575,12 +9575,12 @@ PrefabInstance:
     - target: {fileID: 5151136217073118279, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000061035156
+      value: 22.499985
       objectReference: {fileID: 0}
     - target: {fileID: 5151136217073118279, guid: e36a8a9aa9366f749966bff54d4e22fc,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.000061035
+      value: -45.00003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e36a8a9aa9366f749966bff54d4e22fc, type: 3}

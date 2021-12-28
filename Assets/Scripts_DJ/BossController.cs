@@ -7,6 +7,7 @@ public class BossController : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
+    
     private Vector3[] positions;
     private int index;
     private int current;
@@ -37,6 +38,8 @@ public class BossController : MonoBehaviour
 
     public DamageFlicker damageFlicker;
 
+    [SerializeField] GameObject startPanel;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -49,7 +52,7 @@ public class BossController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false)
+        if (Input.GetKeyDown(KeyCode.Space) && isStarted == false && startPanel.activeSelf == false)
         {
             if (PauseMenu.isPause == true)
             {

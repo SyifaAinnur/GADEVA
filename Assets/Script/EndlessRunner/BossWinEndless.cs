@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossWinEndless : MonoBehaviour
 {
-   [SerializeField] GameObject winPanel;
+//    [SerializeField] GameObject winPanel;
    [SerializeField] PauseMenu1 pauseMenu;
    [SerializeField] BOSSKATA Dialogue;
    [SerializeField] GameObject pauseButton;

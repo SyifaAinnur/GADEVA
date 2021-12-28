@@ -12,6 +12,8 @@ public class Boss : MonoBehaviour
     private int gac;
     private bool thinkmove = false;
     private bool changedir = false;
+
+    [SerializeField] GameObject startPanel;
     private void Start()
     {
         brikk = GetComponent<Brick>();
@@ -22,6 +24,10 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
+        if (startPanel.activeSelf == false)
+        {
+            return;
+        }
         timer++;
         if(timer > 500f)
         {

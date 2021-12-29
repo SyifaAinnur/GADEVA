@@ -168,5 +168,4 @@ MonoBehaviour:
   Bar: {fileID: 0}
   Virus: {fileID: 5118062324482747217, guid: 0e459132961509344894bbf168b373b0, type: 3}
   Player: {fileID: 0}
-  sprites: {fileID: -8867888093175992747, guid: 6308c37a81be1bf4bbe31f511a6e717a,
-    type: 3}
+  sprites: {fileID: 294799122430498885, guid: a96e5a103ecf1d8438f6ff0d7fdce3c0, type: 3}

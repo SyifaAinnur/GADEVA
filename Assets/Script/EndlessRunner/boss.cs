@@ -11,7 +11,6 @@ public class boss : MonoBehaviour
     [SerializeField] Slider Bar;
     [SerializeField] GameObject Virus;
     [SerializeField] Transform Player;
-    [SerializeField] Sprite sprites;
     float dirX, moveSpeed = 8f;
     float timer = 5;
     bool moveRight = true;
@@ -19,6 +18,8 @@ public class boss : MonoBehaviour
     int index = 0;
     Vector3 TargetPosisi;
     bool FindTarget = false;
+
+    private bool rage = false;
 
 
     private void Start()
@@ -63,6 +64,10 @@ public class boss : MonoBehaviour
         lifePoint--;
         Bar.value = lifePoint;
         StartCoroutine(gantiperasaan());
+        if (lifePoint < maxLifePoint * 0.6f)
+        {
+            rage = true;
+        }
         if (lifePoint <= 0)
         {
             FindObjectOfType<BossWinEndless>().winCondition();
@@ -81,10 +86,10 @@ public class boss : MonoBehaviour
     {
 
 
-        if (lifePoint < maxLifePoint * 0.4f)
+        if (rage)
         {
             Tembakancinta = false;
-            transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = sprites;
+            transform.GetChild(0).GetComponent<Animator>().SetBool("rage", true);
         }
         else
         {
@@ -99,7 +104,7 @@ public class boss : MonoBehaviour
 
     private IEnumerator Recordcinta()
     {
-        if (index < 3)
+        if (index < 5)
         {
             yield return new WaitForSeconds(0.5f);
             Instantiate(Virus, transform.position, Quaternion.identity);

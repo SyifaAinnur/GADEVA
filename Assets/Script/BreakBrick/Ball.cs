@@ -38,14 +38,28 @@ public class Ball : MonoBehaviour
         }
         if (inPlay == false)
         {
+
             transform.position = paddle.position;
+        }
+        else 
+        {
+            if (rb.velocity.magnitude > speedneeded)
+            {
+                rb.velocity = rb.velocity.normalized * speedneeded;
+            }
+            else if (rb.velocity.magnitude < speedneeded)
+            {
+                rb.velocity = rb.velocity.normalized * speedneeded;
+            }
         }
 
         if (Input.GetButtonDown("Jump") && !inPlay && startPanel.activeSelf == false)
         {
+            
             inPlay = true;
-            rb.AddForce(Vector2.up * speedneeded);
+            rb.velocity = (Vector2.up * speedneeded);
         }
+
 
         /*if(Timer > 5)
         {
@@ -61,7 +75,8 @@ public class Ball : MonoBehaviour
             LastPost = transform.position;
             Timer += Time.deltaTime;
         }*/
-        Debug.Log(rb.velocity.normalized);
+        Debug.Log(rb.velocity.magnitude);
+        // Debug.Log("inplay " + inPlay);
     }
 
 

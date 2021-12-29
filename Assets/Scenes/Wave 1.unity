@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 835d23739d4981a4d8f3ea36a4ea76cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 1
+  backgroundSpeed: 0.5
   backgroundRenderer: {fileID: 143530601}
 --- !u!1 &225067299
 GameObject:

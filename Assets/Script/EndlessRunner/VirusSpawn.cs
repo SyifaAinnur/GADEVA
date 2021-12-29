@@ -9,7 +9,7 @@ public class VirusSpawn : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        GetComponent<Rigidbody2D>().velocity = Vector3.left * 1000 * Time.deltaTime;
+        GetComponent<Rigidbody2D>().velocity = Vector3.left * 2000 * Time.deltaTime;
     }
 
     void Update()

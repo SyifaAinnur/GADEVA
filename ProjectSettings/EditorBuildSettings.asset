@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Doodle Jump Wave 2.unity
     guid: 35a79a33336f5cb41b5041708ecef568
+  - enabled: 1
+    path: Assets/Scenes/EndingTown.unity
+    guid: 6b4333dd0d9f28547b352ccc60484a21
   m_configObjects: {}

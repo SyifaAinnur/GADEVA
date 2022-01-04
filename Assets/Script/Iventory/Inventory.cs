@@ -5,7 +5,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     // [SerializeField] private GameObject inventoryUI;
-    [SerializeField]  List<ItemBase> slots;
+    [HideInInspector] public List<ItemBase> slots;
 
     public void LoadItem()
     {
@@ -26,6 +26,10 @@ public class Inventory : MonoBehaviour
     public void AddItem(ItemBase item)
     {
         Debug.Log("item item" + item.ItemName);
+        if (slots.Contains (item))
+        {
+            return;
+        }
         slots.Add(item);
         foreach (var itemSlot in slots)
         {

@@ -2170,6 +2170,7 @@ MonoBehaviour:
   rightScreenEdge: {fileID: 1900048922}
   leftScreenEdge: {fileID: 724783354}
   gm: {fileID: 1760910577}
+  startPanel: {fileID: 1573902259}
 --- !u!60 &979230931
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4102,7 +4103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1815314810}
-  speedneeded: 300
+  speedneeded: 6
   inPlay: 0
   paddle: {fileID: 957579986}
   particle: {fileID: 3915121939420136384, guid: 3518cb7da8c262e459569034c9530955,

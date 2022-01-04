@@ -14,6 +14,13 @@ public class Portal : MonoBehaviour, IPlayerTriggerable
     public void OnPlayerTriggerd(PlayerController player)
     {
         this.player = player;
+        if (name == "PortalEnding")
+        {
+            if (player.inventory.slots.Count < 3)
+            {
+                return;
+            }
+        }
         StartCoroutine(SwitchScene());
     }
 

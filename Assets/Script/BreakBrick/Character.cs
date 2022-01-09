@@ -7,14 +7,15 @@ public class Character : MonoBehaviour
 {
     public float moveSpeed;
 
-    public bool IsMoving { get; private set; }
+    public bool IsMoving { get;  set; }
 
     public float OffsetY{ get; private set; } = 0.3f;
     CharacterAnimator animator;
 
 
-    private void Start() {
-        
+    private void Start() 
+    {
+
     }
 
     private void Awake()

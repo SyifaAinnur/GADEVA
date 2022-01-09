@@ -17,6 +17,7 @@ public class GameController : MonoBehaviour
 
 
     [SerializeField] private Pause pausebtn;
+    [SerializeField] private Character player;
     GameState state;
     GameState stateBeforePause;
 
@@ -95,6 +96,7 @@ public class GameController : MonoBehaviour
 
     public void Quit()
     {
+        player.IsMoving = false;
         Time.timeScale = 1;
         pausebtn.gameObject.SetActive(false);
         playerController.gameObject.SetActive(false);

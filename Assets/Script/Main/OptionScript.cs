@@ -1,29 +1,20 @@
 ﻿
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OptionScript : MonoBehaviour
 {
-    [SerializeField] private GameObject[] BGM; 
-    [SerializeField] private GameObject[] SFX;
 
-    private bool BGMbool = true;
-    private bool SFXbool = true;
+    [SerializeField] private Slider SFX;
+    [SerializeField] private AudioSource SFXSource;
 
-    public void SetBGM()
-    {
-        BGMbool = !BGMbool;
-        foreach (GameObject item in BGM)
-        {
-            item.SetActive(BGMbool);
-        }
-    }
 
     public void SetSFX()
     {
-        SFXbool = !SFXbool;
-        foreach (GameObject item in SFX)
+        if (SFX.value >= 0)
         {
-            item.SetActive(SFXbool);
+            SFXSource.volume = SFX.value;
         }
     }
+        
 }

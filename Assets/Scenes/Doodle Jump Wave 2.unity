@@ -1506,6 +1506,7 @@ GameObject:
   - component: {fileID: 314041801}
   - component: {fileID: 314041804}
   - component: {fileID: 314041802}
+  - component: {fileID: 314041803}
   m_Layer: 0
   m_Name: HeadBoss
   m_TagString: HeadBoss
@@ -1521,7 +1522,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314041799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.69, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080359974}
@@ -1534,7 +1535,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314041799}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1572,6 +1573,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16890bc3aeddad14fa7047ad4e81a98b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &314041803
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314041799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!251 &314041804
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -4157,6 +4184,7 @@ GameObject:
   - component: {fileID: 1080359973}
   - component: {fileID: 1080359975}
   - component: {fileID: 1080359976}
+  - component: {fileID: 1080359977}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -4203,7 +4231,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b800a52b9aabecc4f80c68b3470a9a46, type: 3}
+  m_Sprite: {fileID: 7622182390051455463, guid: 59e4d097858ad49499cc9707618640ed,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4287,6 +4316,25 @@ MonoBehaviour:
   sprite: {fileID: 1080359973}
   flickerAmnt: 3
   flickerDuration: 0.1
+--- !u!95 &1080359977
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080359972}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77aa5203930c5d54fac63d9cb1bff250, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1082367586
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,13 +7,32 @@ public class Pause : MonoBehaviour
     [SerializeField] private GameObject menuUI;
     [SerializeField] private Inventory inventory;
 
+    [SerializeField] Character player;
+
+    [SerializeField] CharacterAnimator playerAnimator;
+
+
+
 
     public void StartPauseAdv()
     {
+        playerAnimator.pause = true;
+        player.enabled = false;
+        player.IsMoving = false;
+        playerAnimator.IsMoving = false;
         inventory.LoadItem();
         menuUI.SetActive(true);
         Time.timeScale = 0;
+        // StartCoroutine(WaitPause());
     }
+    // private IEnumerator WaitPause()
+    // {
+    //     Debug.Log("WaitPause");
+    //     yield return new WaitForSecondsRealtime(2f);
+    //     ready = true;
+    //     Time.timeScale = 0;
+
+    // }
 
     public void StartPause()
     {
@@ -21,11 +40,18 @@ public class Pause : MonoBehaviour
         menuUI.SetActive(true);
         Time.timeScale = 0;
         //Debug.Log("pause");
-        
+
     }
     public void Resume()
     {
+        Debug.Log("resume" + player.IsMoving);
         menuUI.SetActive(false);
         Time.timeScale = 1;
+        player.enabled = true;
+        player.IsMoving = false;
+        playerAnimator.IsMoving = false;
+        playerAnimator.wasPreviousMoving = false;
+        playerAnimator.pause = false;
+        
     }
 }

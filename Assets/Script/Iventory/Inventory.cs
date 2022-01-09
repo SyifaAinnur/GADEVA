@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
         {
             foreach (ItemBase item in slots)
             {
-                transform.GetChild(item.IndexNumber).gameObject.SetActive(true);
+                transform.GetChild(1).GetChild(item.IndexNumber).GetChild(0).gameObject.SetActive(true);
                 // if (item.Item != null) {
                 //     item.Item.SetActive(true);
                 //     Debug.Log(item.ItemName);

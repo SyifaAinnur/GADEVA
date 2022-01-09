@@ -21,7 +21,9 @@ public class CharacterAnimator : MonoBehaviour
     SpriteAnimator walkLeftAnim;
 
     SpriteAnimator currentAnim;
-    bool wasPreviousMoving;
+    public bool wasPreviousMoving;
+
+    public bool pause = false;
 
     //references
     SpriteRenderer spriteRenderer;
@@ -38,6 +40,11 @@ public class CharacterAnimator : MonoBehaviour
 
     private void Update()
     {
+        if (pause)
+        {
+            return;
+        }
+
         var preAnim = currentAnim;
 
         if (MoveX == 1)

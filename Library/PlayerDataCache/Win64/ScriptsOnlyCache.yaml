@@ -113,10 +113,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -157,6 +155,8 @@ ScriptsOnlyBuild:
     - Class: 61
       Script: {instanceID: 0}
     - Class: 62
+      Script: {instanceID: 0}
+    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -495,6 +495,125 @@ ScriptsOnlyBuild:
     - Class: 225
       Script: {instanceID: 0}
     - Class: 251
+      Script: {instanceID: 0}
+    Assets/Scenes/EndingTown.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 588}
+    - Class: 114
+      Script: {instanceID: 11174}
+    - Class: 114
+      Script: {instanceID: 11224}
+    - Class: 114
+      Script: {instanceID: 11488}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 12030}
+    - Class: 114
+      Script: {instanceID: 12150}
+    - Class: 114
+      Script: {instanceID: 12170}
+    - Class: 114
+      Script: {instanceID: 12198}
+    - Class: 114
+      Script: {instanceID: 12264}
+    - Class: 114
+      Script: {instanceID: 12570}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 114
+      Script: {instanceID: 13166}
+    - Class: 114
+      Script: {instanceID: 13374}
+    - Class: 114
+      Script: {instanceID: 13406}
+    - Class: 114
+      Script: {instanceID: 13576}
+    - Class: 114
+      Script: {instanceID: 13770}
+    - Class: 114
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 13824}
+    - Class: 114
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14030}
+    - Class: 114
+      Script: {instanceID: 14152}
+    - Class: 114
+      Script: {instanceID: 14172}
+    - Class: 114
+      Script: {instanceID: 14462}
+    - Class: 114
+      Script: {instanceID: 14490}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     Assets/Scenes/GamePlay.unity:
     - Class: 1
@@ -937,6 +1056,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 588}
     - Class: 114
       Script: {instanceID: 11174}
+    - Class: 114
+      Script: {instanceID: 11258}
     - Class: 114
       Script: {instanceID: 11298}
     - Class: 114
@@ -2227,7 +2348,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: 6a0d7834b1353e2ec2f275b58d9cdf97
+      Hash: 3a2df02b2507af3657a426197f900115
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -2305,7 +2426,7 @@ ScriptsOnlyBuild:
     className: WrapKanan
   - hash:
       serializedVersion: 2
-      Hash: 8117426c9072a44460aedddb32cd34e2
+      Hash: a533d80055ecf9bca561861541049913
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Paddle
@@ -2329,13 +2450,13 @@ ScriptsOnlyBuild:
     className: TrainerController2
   - hash:
       serializedVersion: 2
-      Hash: 4bd597780faddf664741d034ebdac2d3
+      Hash: 168889db3f045bfddb672755792570b1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Pause
   - hash:
       serializedVersion: 2
-      Hash: 890895da721fcae149fb8910f6a54954
+      Hash: 6ee4309d24a7229f3ae84103bfa0286c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Boss
@@ -2365,7 +2486,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 59bb9b7d8c5e860af20901fcd1d68b8b
+      Hash: 0bd8221ad2f455405225e9e992582a48
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: boss
@@ -2497,7 +2618,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 6ff2a860af8257ae4bae56af3a9483bd
+      Hash: f18ff920a519c4d450254cec82783a24
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -2605,7 +2726,7 @@ ScriptsOnlyBuild:
     className: BossWin
   - hash:
       serializedVersion: 2
-      Hash: c11ebe4326a01b57e996ab62f6c8e635
+      Hash: 056c9ace8dca54172faf4e0e66aa5967
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterAnimator
@@ -2887,7 +3008,7 @@ ScriptsOnlyBuild:
     className: PauseMenu
   - hash:
       serializedVersion: 2
-      Hash: 91cd06a0b775b388760a5a12496bcb54
+      Hash: a78b8f7088e4278f2f8cff7337e4262b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: OptionScript
@@ -2958,4 +3079,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Transisi DoodleJump.unity
   - Assets/Scenes/Transisi DoodleJump2.unity
   - Assets/Scenes/Doodle Jump Wave 2.unity
-  playerPath: D:/projectAkhir/TestGame/New folder/Build V1.5/TestGame.exe
+  - Assets/Scenes/EndingTown.unity
+  playerPath: D:/projectAkhir/TestGame/New folder/Build v1.6/TestGame.exe

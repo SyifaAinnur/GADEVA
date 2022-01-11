@@ -17,7 +17,6 @@ public class Pause : MonoBehaviour
     public void StartPauseAdv()
     {
         playerAnimator.pause = true;
-        player.enabled = false;
         player.IsMoving = false;
         playerAnimator.IsMoving = false;
         inventory.LoadItem();
@@ -47,10 +46,9 @@ public class Pause : MonoBehaviour
         Debug.Log("resume" + player.IsMoving);
         menuUI.SetActive(false);
         Time.timeScale = 1;
-        player.enabled = true;
-        player.IsMoving = false;
+        
         playerAnimator.IsMoving = false;
-        playerAnimator.wasPreviousMoving = false;
+        
         playerAnimator.pause = false;
         
     }

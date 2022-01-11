@@ -2701,6 +2701,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuUI: {fileID: 722860957}
   inventory: {fileID: 0}
+  player: {fileID: 0}
+  playerAnimator: {fileID: 0}
 --- !u!1 &722911998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5129,7 +5131,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: SQUIRTWARD
+  m_Text: TAKOKAIJU
 --- !u!222 &1786138079
 CanvasRenderer:
   m_ObjectHideFlags: 0

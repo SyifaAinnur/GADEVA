@@ -17,7 +17,10 @@ public class GameController : MonoBehaviour
 
 
     [SerializeField] private Pause pausebtn;
+    [SerializeField] private GameObject pauseMenu;
     [SerializeField] private Character player;
+
+    [SerializeField] private CharacterAnimator playerAnimator;
     GameState state;
     GameState stateBeforePause;
 
@@ -79,6 +82,14 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
+        if (!playerAnimator.pause && !playerAnimator.IsMoving)
+        {
+            pauseMenu.gameObject.SetActive(true);
+        }
+        else
+        {
+            pauseMenu.gameObject.SetActive(false);
+        }
         if (state == GameState.FreeRoam)
         {
             playerController.HandleUpdate();

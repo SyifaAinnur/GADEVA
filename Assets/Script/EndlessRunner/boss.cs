@@ -11,6 +11,7 @@ public class boss : MonoBehaviour
     [SerializeField] Slider Bar;
     [SerializeField] GameObject Virus;
     [SerializeField] Transform Player;
+    [SerializeField] Text bossText;
     float dirX, moveSpeed = 8f;
     float timer = 5;
     bool moveRight = true;
@@ -67,6 +68,7 @@ public class boss : MonoBehaviour
         if (lifePoint < maxLifePoint * 0.6f)
         {
             rage = true;
+            bossText.text = "RUDRA";
         }
         if (lifePoint <= 0)
         {

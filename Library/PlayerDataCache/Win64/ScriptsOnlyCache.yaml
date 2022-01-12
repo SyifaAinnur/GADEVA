@@ -32,6 +32,7 @@ ScriptsOnlyBuild:
     - DialogueMid
     - DialogueMidEndless
     - DialogueTrigger
+    - EndingScript
     - EssentialObjects
     - EssentialObjectsSpawner
     - Fader
@@ -69,6 +70,7 @@ ScriptsOnlyBuild:
     - PlayerEndless
     - PlayerHealthBar
     - Portal
+    - PortalEnding
     - PowerUp
     - ProgressBar
     - RotateChildSuriken
@@ -113,8 +115,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -519,10 +523,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -534,55 +534,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11174}
     - Class: 114
-      Script: {instanceID: 11224}
-    - Class: 114
       Script: {instanceID: 11488}
     - Class: 114
       Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 12030}
-    - Class: 114
-      Script: {instanceID: 12150}
-    - Class: 114
       Script: {instanceID: 12170}
-    - Class: 114
-      Script: {instanceID: 12198}
     - Class: 114
       Script: {instanceID: 12264}
     - Class: 114
-      Script: {instanceID: 12570}
-    - Class: 114
-      Script: {instanceID: 12920}
-    - Class: 114
-      Script: {instanceID: 13012}
-    - Class: 114
-      Script: {instanceID: 13166}
-    - Class: 114
-      Script: {instanceID: 13374}
-    - Class: 114
-      Script: {instanceID: 13406}
-    - Class: 114
       Script: {instanceID: 13576}
-    - Class: 114
-      Script: {instanceID: 13770}
     - Class: 114
       Script: {instanceID: 13806}
     - Class: 114
       Script: {instanceID: 13824}
     - Class: 114
-      Script: {instanceID: 13848}
-    - Class: 114
-      Script: {instanceID: 14030}
-    - Class: 114
-      Script: {instanceID: 14152}
-    - Class: 114
-      Script: {instanceID: 14172}
-    - Class: 114
       Script: {instanceID: 14462}
     - Class: 114
-      Script: {instanceID: 14490}
-    - Class: 114
-      Script: {instanceID: 14510}
+      Script: {instanceID: 49694}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -600,12 +568,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 241
-      Script: {instanceID: 0}
-    - Class: 243
-      Script: {instanceID: 0}
-    - Class: 245
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -1649,6 +1611,127 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 1839735485
       Script: {instanceID: 0}
+    Assets/Scenes/TownEnding.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 66
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 588}
+    - Class: 114
+      Script: {instanceID: 11174}
+    - Class: 114
+      Script: {instanceID: 11224}
+    - Class: 114
+      Script: {instanceID: 11488}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 12030}
+    - Class: 114
+      Script: {instanceID: 12150}
+    - Class: 114
+      Script: {instanceID: 12170}
+    - Class: 114
+      Script: {instanceID: 12198}
+    - Class: 114
+      Script: {instanceID: 12264}
+    - Class: 114
+      Script: {instanceID: 12570}
+    - Class: 114
+      Script: {instanceID: 12920}
+    - Class: 114
+      Script: {instanceID: 13012}
+    - Class: 114
+      Script: {instanceID: 13166}
+    - Class: 114
+      Script: {instanceID: 13374}
+    - Class: 114
+      Script: {instanceID: 13406}
+    - Class: 114
+      Script: {instanceID: 13576}
+    - Class: 114
+      Script: {instanceID: 13770}
+    - Class: 114
+      Script: {instanceID: 13806}
+    - Class: 114
+      Script: {instanceID: 13824}
+    - Class: 114
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14030}
+    - Class: 114
+      Script: {instanceID: 14152}
+    - Class: 114
+      Script: {instanceID: 14172}
+    - Class: 114
+      Script: {instanceID: 14462}
+    - Class: 114
+      Script: {instanceID: 14490}
+    - Class: 114
+      Script: {instanceID: 14510}
+    - Class: 114
+      Script: {instanceID: 56352}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
+      Script: {instanceID: 0}
     Assets/Scenes/Transisi DoodleJump.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -2348,7 +2431,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: 3a2df02b2507af3657a426197f900115
+      Hash: 882b9ca3f13ea1eb0c3fc0406d8ae708
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -3060,6 +3143,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Brick
+  - hash:
+      serializedVersion: 2
+      Hash: 11c83bd05e92afc96daa8394df260804
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EndingScript
+  - hash:
+      serializedVersion: 2
+      Hash: ac56c72d4f5cbddd669c9e205ade370c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PortalEnding
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
@@ -3079,5 +3174,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Transisi DoodleJump.unity
   - Assets/Scenes/Transisi DoodleJump2.unity
   - Assets/Scenes/Doodle Jump Wave 2.unity
+  - Assets/Scenes/TownEnding.unity
   - Assets/Scenes/EndingTown.unity
-  playerPath: D:/projectAkhir/TestGame/New folder/Build v1.6/TestGame.exe
+  playerPath: D:/projectAkhir/TestGame/New folder/Build V1.7/TestGame.exe

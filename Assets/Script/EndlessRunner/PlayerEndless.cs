@@ -32,7 +32,7 @@ public class PlayerEndless : MonoBehaviour
         {
             boss = true;
         }
-        HealtPointText.text = "Life : " + HealtPoint;
+        HealtPointText.text = "x" + HealtPoint;
     }
 
     // Update is called once per frame
@@ -82,7 +82,7 @@ public class PlayerEndless : MonoBehaviour
     {
 
         HealtPoint -= 1;
-        HealtPointText.text = "Life : " + HealtPoint;
+        HealtPointText.text = "x" + HealtPoint;
         if (HealtPoint <= 0)
         {
             Destroy(gameObject);

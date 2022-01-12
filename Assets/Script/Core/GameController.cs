@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
     [SerializeField] private Character player;
 
     [SerializeField] private CharacterAnimator playerAnimator;
+    
     GameState state;
     GameState stateBeforePause;
 
@@ -107,8 +108,8 @@ public class GameController : MonoBehaviour
 
     public void Quit()
     {
-        player.IsMoving = false;
         Time.timeScale = 1;
+        playerAnimator.pause = false;
         pausebtn.gameObject.SetActive(false);
         playerController.gameObject.SetActive(false);
         namaScene = SceneManager.GetActiveScene().name;
